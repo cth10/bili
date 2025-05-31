@@ -31,30 +31,12 @@ export function Mascot({ type, size = "md", className = "", useImage = false }: 
     );
   }
 
-  // Use bilibili-22.gif for mascot 22, CSS animation for mascot 33
-  if (type === "22") {
-    const imageSizeClasses = {
-      sm: "w-12 h-12",
-      md: "w-20 h-20", 
-      lg: "w-24 h-24",
-      xl: "w-32 h-32"
-    };
-    
-    return (
-      <img 
-        src="/bilibili-22.gif"
-        alt="Mascote 22"
-        className={`${imageSizeClasses[size]} ${className} object-contain`}
-        title="Mascote 22"
-      />
-    );
-  }
-
-  // Keep CSS animation for mascot 33
+  const mascotClass = type === "22" ? "mascot-22" : "mascot-33";
+  
   return (
     <div 
-      className={`mascot-33 ${sizeClasses[size]} ${className}`}
-      title="Mascote 33"
+      className={`${mascotClass} ${sizeClasses[size]} ${className}`}
+      title={`Mascote ${type}`}
     />
   );
 }
