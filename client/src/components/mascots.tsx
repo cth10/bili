@@ -41,10 +41,10 @@ export function Mascot({ type, size = "md", className = "", useImage = false }: 
   );
 }
 
-export function MascotPair({ size = "md", className = "" }: { size?: "sm" | "md" | "lg" | "xl"; className?: string; }) {
+export function MascotPair({ size = "xl", className = "" }: { size?: "sm" | "md" | "lg" | "xl"; className?: string; }) {
   return (
     <div className={`flex justify-center items-center ${className}`}>
-      <Mascot type="22" size={size} useImage={true} />
+      <Mascot type="22" size="xl" useImage={true} />
     </div>
   );
 }
