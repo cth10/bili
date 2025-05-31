@@ -267,8 +267,8 @@ export default function Home() {
                       title="Mascotes Bilibili"
                     />
                   </div>
-                  <p className="mt-4 text-lg font-medium bili-dark">
-                    Conectando fãs ao redor do mundo
+                  <p className="mt-6 text-xl font-semibold gradient-text text-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30 shadow-lg">
+                    ✨ Conectando fãs ao redor do mundo ✨
                   </p>
                 </div>
               </div>
