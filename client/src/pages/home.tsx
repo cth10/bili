@@ -330,11 +330,6 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <div className="flex justify-center items-center space-x-4 mb-4">
-              <Mascot type="22" size="sm" />
-              <span className="text-gray-400">×</span>
-              <Mascot type="33" size="sm" />
-            </div>
             <p className="text-gray-400">
               © 2024 Bilibili Brasil - Site de fãs não oficial. Feito com ❤️ para a comunidade otaku.
             </p>
