@@ -50,10 +50,19 @@ export function Mascot({ type, size = "md", className = "", useImage = false }: 
     );
   }
 
-  // Keep CSS animation for mascot 33
+  // Use bilibili-33-.gif for mascot 33
+  const imageSizeClasses = {
+    sm: "w-12 h-12",
+    md: "w-20 h-20", 
+    lg: "w-24 h-24",
+    xl: "w-32 h-32"
+  };
+  
   return (
-    <div 
-      className={`mascot-33 ${sizeClasses[size]} ${className}`}
+    <img 
+      src="/bilibili-33-.gif"
+      alt="Mascote 33"
+      className={`${imageSizeClasses[size]} ${className} object-contain`}
       title="Mascote 33"
     />
   );
