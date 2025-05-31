@@ -314,7 +314,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Discord Card */}
-            <Card className="bg-gradient-to-br from-[#5865f2]/20 to-[#5865f2]/5 border-[#5865f2]/30 rounded-3xl p-8 hover:shadow-2xl hover:shadow-[#5865f2]/20 transition-all duration-500 group backdrop-blur-sm">
+            <Card className="bg-gradient-to-br from-white/95 to-gray-50/95 border-[#5865f2]/30 rounded-3xl p-8 hover:shadow-2xl hover:shadow-[#5865f2]/20 transition-all duration-500 group backdrop-blur-sm">
               <CardContent className="p-0 text-center">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 bg-[#5865f2] rounded-2xl flex items-center justify-center mx-auto group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-[#5865f2]/50">
@@ -327,22 +327,22 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
                   Discord Server
                   <span className="text-lg">💬</span>
                 </h3>
 
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
                   Entre no nosso servidor Discord para bater papo em tempo real, compartilhar fanarts, 
                   discutir episódios e participar de eventos especiais! 
                 </p>
 
                 <div className="space-y-3 mb-6">
                   
-                  <div className="flex justify-center space-x-4 text-xs text-gray-400">
-                    <span className="flex items-center"><span className="text-[#5865f2]">🎌</span> Anime</span>
-                    <span className="flex items-center"><span className="text-[#5865f2]">🎮</span> Gaming</span>
-                    <span className="flex items-center"><span className="text-[#5865f2]">🎵</span> Música</span>
+                  <div className="flex justify-center space-x-4 text-sm text-gray-600">
+                    <span className="flex items-center font-medium"><span className="text-[#5865f2]">🎌</span> Anime</span>
+                    <span className="flex items-center font-medium"><span className="text-[#5865f2]">🎮</span> Gaming</span>
+                    <span className="flex items-center font-medium"><span className="text-[#5865f2]">🎵</span> Música</span>
                   </div>
                 </div>
 
@@ -359,7 +359,7 @@ export default function Home() {
             </Card>
 
             {/* X (Twitter) Card */}
-            <Card className="bg-gradient-to-br from-black/40 to-gray-900/20 border-gray-700/50 rounded-3xl p-8 hover:shadow-2xl hover:shadow-black/30 transition-all duration-500 group backdrop-blur-sm">
+            <Card className="bg-gradient-to-br from-white/95 to-gray-50/95 border-gray-300 rounded-3xl p-8 hover:shadow-2xl hover:shadow-black/30 transition-all duration-500 group backdrop-blur-sm">
               <CardContent className="p-0 text-center">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mx-auto group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-black/50">
@@ -372,25 +372,25 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
                   Bilibili BR no X
                   <span className="text-lg">🐦</span>
                 </h3>
 
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
                   Siga nosso X para ficar por dentro das últimas novidades do Bilibili, 
                   memes fresquinhos e updates da comunidade otaku! 
                 </p>
 
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-center justify-center text-sm text-gray-400">
+                  <div className="flex items-center justify-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-[hsl(var(--bili-pink))] rounded-full mr-2 animate-pulse"></span>
-                    Tweets diários sobre anime e Bilibili
+                    <span className="font-medium">Tweets diários sobre anime e Bilibili</span>
                   </div>
-                  <div className="flex justify-center space-x-4 text-xs text-gray-400">
-                    <span className="flex items-center"><span className="text-[hsl(var(--bili-pink))]">📰</span> News</span>
-                    <span className="flex items-center"><span className="text-[hsl(var(--bili-pink))]">😂</span> Memes</span>
-                    <span className="flex items-center"><span className="text-[hsl(var(--bili-pink))]">🔥</span> Trends</span>
+                  <div className="flex justify-center space-x-4 text-sm text-gray-600">
+                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">📰</span> News</span>
+                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">😂</span> Memes</span>
+                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">🔥</span> Trends</span>
                   </div>
                 </div>
 
