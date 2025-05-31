@@ -119,69 +119,7 @@
     border: 1px solid hsla(var(--bili-blue), 0.1);
   }
 
-  .mascot-22 {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, hsl(var(--bili-blue)), hsl(195 100% 35%));
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    position: relative;
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .mascot-22::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 25px 0 white, 8px 15px hsl(195 100% 35%), 17px 15px hsl(195 100% 35%);
-  }
-
-  .mascot-22::after {
-    content: '';
-    position: absolute;
-    bottom: 15px;
-    left: 30px;
-    width: 20px;
-    height: 8px;
-    background: hsl(195 100% 35%);
-    border-radius: 50%;
-  }
-
-  .mascot-33 {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, hsl(var(--bili-pink)), hsl(340 96% 65%));
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    position: relative;
-    animation: float 3s ease-in-out infinite 1s;
-  }
-
-  .mascot-33::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 25px 0 white, 8px 15px hsl(340 96% 65%), 17px 15px hsl(340 96% 65%);
-  }
-
-  .mascot-33::after {
-    content: '';
-    position: absolute;
-    bottom: 15px;
-    left: 30px;
-    width: 20px;
-    height: 8px;
-    background: hsl(340 96% 65%);
-    border-radius: 50%;
-  }
+  
 }
 
 @layer utilities {

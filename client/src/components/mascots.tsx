@@ -13,12 +13,14 @@ export function Mascot({ type, size = "md", className = "" }: MascotProps) {
   };
   
   return (
-    <img 
-      src="/2233bilibili.webp"
-      alt={`Mascote ${type}`}
-      className={`${sizeClasses[size]} ${className} object-contain`}
-      title={`Mascote ${type}`}
-    />
+    <div className={`${sizeClasses[size]} ${className} flex items-center justify-center`}>
+      <img 
+        src="/2233bilibili.webp"
+        alt={`Mascote ${type}`}
+        className="w-full h-full object-contain"
+        title={`Mascote ${type}`}
+      />
+    </div>
   );
 }
 
