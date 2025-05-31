@@ -258,7 +258,7 @@ export default function Home() {
             <div className="text-center">
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] rounded-full blur-xl opacity-30 animate-pulse-glow"></div>
-                <div className="relative bg-white rounded-full p-8 shadow-xl">
+                <div className="relative">
                   <div className="flex items-center justify-center">
                     <img 
                       src="/2233.png"
