@@ -21,9 +21,11 @@ export function Mascot({ type, size = "md", className = "", useImage = false }: 
       xl: "w-40 h-40"
     };
     
+    const imageSrc = type === "22" ? "/bilibili-22.gif" : "/2233bilibili.webp";
+    
     return (
       <img 
-        src="/2233bilibili.webp"
+        src={imageSrc}
         alt={`Mascote ${type}`}
         className={`${imageSizeClasses[size]} ${className} object-contain`}
         title={`Mascote ${type}`}
