@@ -263,7 +263,7 @@ export default function Home() {
                     <img 
                       src="/2233.png"
                       alt="Mascotes 22 e 33"
-                      className="w-32 h-32 object-contain"
+                      className="w-48 h-48 object-contain"
                       title="Mascotes Bilibili"
                     />
                   </div>
