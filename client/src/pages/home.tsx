@@ -259,19 +259,16 @@ export default function Home() {
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] rounded-full blur-xl opacity-30 animate-pulse-glow"></div>
                 <div className="relative bg-white rounded-full p-8 shadow-xl">
-                  <div className="flex items-center justify-center">
-                    <img 
-                      src="/2233.png"
-                      alt="Mascotes 22 e 33"
-                      className="w-32 h-32 object-contain"
-                      title="Mascotes 22 e 33"
-                    />
+                  <div className="flex items-center justify-center space-x-6">
+                    <Mascot type="22" size="md" />
+                    <div className="text-6xl animate-bounce-slow">❤️</div>
+                    <Mascot type="33" size="md" />
                   </div>
                   <p className="mt-4 text-lg font-medium bili-dark">
                     Conectando fãs ao redor do mundo
                   </p>
                 </div>
-              </div></div>
+              </div>
               
               <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                 <div>
