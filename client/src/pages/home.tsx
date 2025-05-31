@@ -333,12 +333,15 @@ export default function Home() {
                 </h3>
 
                 <p className="text-gray-700 mb-6 leading-relaxed font-medium">
-                  Entre no nosso servidor Discord para bater papo em tempo real, compartilhar fanarts, 
-                  discutir episódios e participar de eventos especiais! 
+                  🚧 Servidor em construção! Seja um dos primeiros membros do nosso Discord
+                  para bater papo sobre anime, gaming e cultura otaku quando estivermos prontos! 
                 </p>
 
                 <div className="space-y-3 mb-6">
-                  
+                  <div className="flex items-center justify-center text-sm text-gray-600">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
+                    <span className="font-medium">🔨 Em construção - Seja um pioneiro!</span>
+                  </div>
                   <div className="flex justify-center space-x-4 text-sm text-gray-600">
                     <span className="flex items-center font-medium"><span className="text-[#5865f2]">🎌</span> Anime</span>
                     <span className="flex items-center font-medium"><span className="text-[#5865f2]">🎮</span> Gaming</span>
@@ -376,19 +379,19 @@ export default function Home() {
                 </h3>
 
                 <p className="text-gray-700 mb-6 leading-relaxed font-medium">
-                  Siga nosso X para ficar por dentro das últimas novidades do Bilibili, 
-                  memes fresquinhos e updates da comunidade otaku! 
+                  Siga nosso X para acompanhar o time de LoL do Bilibili Gaming, 
+                  novidades dos campeonatos e updates da comunidade gamer! 
                 </p>
 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-[hsl(var(--bili-pink))] rounded-full mr-2 animate-pulse"></span>
-                    <span className="font-medium">Tweets diários sobre anime e Bilibili</span>
+                    <span className="font-medium">Focado no time de LoL do Bilibili</span>
                   </div>
                   <div className="flex justify-center space-x-4 text-sm text-gray-600">
-                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">📰</span> News</span>
-                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">😂</span> Memes</span>
-                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">🔥</span> Trends</span>
+                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">🏆</span> LoL</span>
+                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">⚡</span> Esports</span>
+                    <span className="flex items-center font-medium"><span className="text-[hsl(var(--bili-pink))]">🎮</span> Gaming</span>
                   </div>
                 </div>
 
