@@ -44,7 +44,12 @@ export function Mascot({ type, size = "md", className = "", useImage = false }: 
 export function MascotPair({ size = "xl", className = "" }: { size?: "sm" | "md" | "lg" | "xl"; className?: string; }) {
   return (
     <div className={`flex justify-center items-center ${className}`}>
-      <Mascot type="22" size="xl" useImage={true} />
+      <img 
+        src="/2233bilibili.webp"
+        alt="Mascote 22"
+        className="w-64 h-64 object-contain"
+        title="Mascote 22"
+      />
     </div>
   );
 }
