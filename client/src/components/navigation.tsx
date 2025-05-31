@@ -43,9 +43,11 @@ export default function Navigation() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">B</span>
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Bilibili Logo" 
+              className="w-8 h-8 object-contain"
+            />
             <h1 className="text-xl font-bold gradient-text">Bilibili Brasil</h1>
           </div>
           <div className="hidden md:flex space-x-6">
