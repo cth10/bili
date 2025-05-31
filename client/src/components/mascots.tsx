@@ -43,10 +43,8 @@ export function Mascot({ type, size = "md", className = "", useImage = false }: 
 
 export function MascotPair({ size = "md", className = "" }: { size?: "sm" | "md" | "lg" | "xl"; className?: string; }) {
   return (
-    <div className={`flex justify-center items-center space-x-6 ${className}`}>
+    <div className={`flex justify-center items-center ${className}`}>
       <Mascot type="22" size={size} useImage={true} />
-      <div className="text-4xl animate-pulse">💙</div>
-      <Mascot type="33" size={size} useImage={true} />
     </div>
   );
 }
