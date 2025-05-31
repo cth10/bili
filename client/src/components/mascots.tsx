@@ -47,7 +47,7 @@ export function MascotPair({ size = "xl", className = "" }: { size?: "sm" | "md"
       <img 
         src="/2233bilibili.webp"
         alt="Mascote 22"
-        className="w-64 h-64 object-contain"
+        className="w-96 h-96 object-contain"
         title="Mascote 22"
       />
     </div>
