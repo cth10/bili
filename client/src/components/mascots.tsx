@@ -11,12 +11,12 @@ export function Mascot({ type, size = "md", className = "" }: MascotProps) {
     lg: "w-24 h-24",
     xl: "w-32 h-32"
   };
-
-  const mascotClass = type === "22" ? "mascot-22" : "mascot-33";
   
   return (
-    <div 
-      className={`${mascotClass} ${sizeClasses[size]} ${className}`}
+    <img 
+      src="/2233bilibili.webp"
+      alt={`Mascote ${type}`}
+      className={`${sizeClasses[size]} ${className} object-contain`}
       title={`Mascote ${type}`}
     />
   );
