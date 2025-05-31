@@ -102,7 +102,12 @@ export default function Home() {
             <Card className="bili-card rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300">
               <CardContent className="p-0">
                 <div className="flex justify-center mb-6">
-                  <Mascot type="22" size="xl" className="group-hover:scale-110 transition-transform duration-300" />
+                  <img 
+                    src="/bilibili-22.gif"
+                    alt="Mascote 22"
+                    className="w-32 h-32 object-contain group-hover:scale-110 transition-transform duration-300"
+                    title="Mascote 22"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold bili-blue mb-4">Mascote 22</h3>
                 <p className="text-gray-600 mb-4">
