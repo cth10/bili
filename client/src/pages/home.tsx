@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section id="inicio" className="pt-24 pb-16 min-h-screen flex items-center">
         <div className="container mx-auto px-6">
@@ -49,7 +49,7 @@ export default function Home() {
               Conheça a jornada de uma das plataformas mais inovadoras da internet
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bili-card rounded-2xl p-8 text-center group hover:shadow-xl transition-all duration-300">
               <CardContent className="p-0">
@@ -62,7 +62,7 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="bili-card rounded-2xl p-8 text-center group hover:shadow-xl transition-all duration-300">
               <CardContent className="p-0">
                 <div className="w-16 h-16 bg-gradient-to-r from-[hsl(var(--bili-pink))] to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse-glow">
@@ -74,7 +74,7 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="bili-card rounded-2xl p-8 text-center group hover:shadow-xl transition-all duration-300">
               <CardContent className="p-0">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-[hsl(var(--bili-pink))] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse-glow">
@@ -97,7 +97,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold gradient-text mb-4">Conheça os Mascotes</h2>
             <p className="text-xl text-gray-600">22 e 33, os adoráveis mascotes do Bilibili</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <Card className="bili-card rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300">
               <CardContent className="p-0">
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card className="bili-card rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300">
               <CardContent className="p-0">
                 <div className="flex justify-center mb-6">
@@ -143,7 +143,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold gradient-text mb-4">Principais Funcionalidades</h2>
             <p className="text-xl text-gray-600">Descubra o que torna o Bilibili único</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -206,7 +206,7 @@ export default function Home() {
               Uma comunidade única onde criatividade e paixão se encontram
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <Card className="bili-card rounded-2xl p-6">
@@ -223,7 +223,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="bili-card rounded-2xl p-6">
                 <CardContent className="p-0">
                   <h3 className="text-xl font-semibold bili-dark mb-3 flex items-center">
@@ -238,7 +238,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="bili-card rounded-2xl p-6">
                 <CardContent className="p-0">
                   <h3 className="text-xl font-semibold bili-dark mb-3 flex items-center">
@@ -254,7 +254,7 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
-            
+
             <div className="text-center">
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] rounded-full blur-xl opacity-30 animate-pulse-glow"></div>
@@ -272,7 +272,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold bili-blue">200M+</div>
@@ -299,7 +299,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-0 w-40 h-40 bg-[hsl(var(--bili-pink))] rounded-full blur-3xl animate-pulse-glow delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500 rounded-full blur-3xl opacity-30 animate-pulse-glow delay-500"></div>
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -307,12 +307,11 @@ export default function Home() {
                 Junte-se à Nossa Comunidade
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Conecte-se com outros otakus, compartilhe memes, discuta animes e faça parte da família Bilibili Brasil! 
-              <span className="text-[hsl(var(--bili-pink))]">みんなで一緒に楽しもう！</span>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+              Conecte-se com outros otakus, compartilhe memes, discuta animes e faça parte da família Bilibili Brasil!
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Discord Card */}
             <Card className="bg-gradient-to-br from-[#5865f2]/20 to-[#5865f2]/5 border-[#5865f2]/30 rounded-3xl p-8 hover:shadow-2xl hover:shadow-[#5865f2]/20 transition-all duration-500 group backdrop-blur-sm">
@@ -327,30 +326,26 @@ export default function Home() {
                     <span className="text-xs text-white">!</span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
                   Discord Server
                   <span className="text-lg">💬</span>
                 </h3>
-                
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Entre no nosso servidor Discord para bater papo em tempo real, compartilhar fanarts, 
                   discutir episódios e participar de eventos especiais! 
-                  <span className="text-[#5865f2] font-semibold">リアルタイムで話そう！</span>
                 </p>
-                
+
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-center justify-center text-sm text-gray-400">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                    +1,000 membros online agora
-                  </div>
+                  
                   <div className="flex justify-center space-x-4 text-xs text-gray-400">
                     <span className="flex items-center"><span className="text-[#5865f2]">🎌</span> Anime</span>
                     <span className="flex items-center"><span className="text-[#5865f2]">🎮</span> Gaming</span>
                     <span className="flex items-center"><span className="text-[#5865f2]">🎵</span> Música</span>
                   </div>
                 </div>
-                
+
                 <Button 
                   className="w-full bg-[#5865f2] hover:bg-[#4752c4] text-white font-semibold py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#5865f2]/50"
                   onClick={() => window.open('https://discord.gg/MDGtsbR3', '_blank')}
@@ -362,7 +357,7 @@ export default function Home() {
                 </Button>
               </CardContent>
             </Card>
-            
+
             {/* X (Twitter) Card */}
             <Card className="bg-gradient-to-br from-black/40 to-gray-900/20 border-gray-700/50 rounded-3xl p-8 hover:shadow-2xl hover:shadow-black/30 transition-all duration-500 group backdrop-blur-sm">
               <CardContent className="p-0 text-center">
@@ -376,18 +371,17 @@ export default function Home() {
                     <span className="text-xs text-white">✨</span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
                   Bilibili BR no X
                   <span className="text-lg">🐦</span>
                 </h3>
-                
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Siga nosso X para ficar por dentro das últimas novidades do Bilibili, 
                   memes fresquinhos e updates da comunidade otaku! 
-                  <span className="text-[hsl(var(--bili-pink))] font-semibold">最新情報をゲット！</span>
                 </p>
-                
+
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-center text-sm text-gray-400">
                     <span className="w-2 h-2 bg-[hsl(var(--bili-pink))] rounded-full mr-2 animate-pulse"></span>
@@ -399,7 +393,7 @@ export default function Home() {
                     <span className="flex items-center"><span className="text-[hsl(var(--bili-pink))]">🔥</span> Trends</span>
                   </div>
                 </div>
-                
+
                 <Button 
                   className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-black/50 border border-gray-700"
                   onClick={() => window.open('https://x.com/BilibiliBR', '_blank')}
@@ -412,7 +406,7 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-          
+
           {/* Call to Action */}
           <div className="text-center mt-12">
             <div className="inline-flex items-center justify-center p-1 bg-gradient-to-r from-[hsl(var(--bili-blue))] via-purple-500 to-[hsl(var(--bili-pink))] rounded-full">
@@ -443,7 +437,7 @@ export default function Home() {
                 Descobrindo e celebrando a cultura otaku através da maior plataforma de vídeos da China.
               </p>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Links Úteis</h4>
               <ul className="space-y-2 text-gray-400">
@@ -453,7 +447,7 @@ export default function Home() {
                 <li><a href="https://member.bilibili.com/studio/home" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-blue))] transition-colors">Centro de Criadores</a></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Categorias Populares</h4>
               <ul className="space-y-2 text-gray-400">
@@ -464,7 +458,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <p className="text-gray-400">
               © 2024 Bilibili Brasil - Site de fãs não oficial. Feito com ❤️ para a comunidade otaku.
