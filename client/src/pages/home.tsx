@@ -311,20 +311,20 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Links Úteis</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-[hsl(var(--bili-blue))] transition-colors">Site Oficial Bilibili</a></li>
-                <li><a href="#" className="hover:text-[hsl(var(--bili-blue))] transition-colors">App Mobile</a></li>
-                <li><a href="#" className="hover:text-[hsl(var(--bili-blue))] transition-colors">Comunidade Internacional</a></li>
-                <li><a href="#" className="hover:text-[hsl(var(--bili-blue))] transition-colors">Centro de Criadores</a></li>
+                <li><a href="https://www.bilibili.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-blue))] transition-colors">Site Oficial Bilibili</a></li>
+                <li><a href="https://app.bilibili.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-blue))] transition-colors">App Mobile</a></li>
+                <li><a href="https://www.bilibili.tv/" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-blue))] transition-colors">Bilibili Internacional</a></li>
+                <li><a href="https://member.bilibili.com/studio/home" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-blue))] transition-colors">Centro de Criadores</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Categorias Populares</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-[hsl(var(--bili-pink))] transition-colors">Anime & Manga</a></li>
-                <li><a href="#" className="hover:text-[hsl(var(--bili-pink))] transition-colors">Gaming</a></li>
-                <li><a href="#" className="hover:text-[hsl(var(--bili-pink))] transition-colors">Música & Covers</a></li>
-                <li><a href="#" className="hover:text-[hsl(var(--bili-pink))] transition-colors">Educação</a></li>
+                <li><a href="https://www.bilibili.com/v/anime/" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-pink))] transition-colors">Anime & Manga</a></li>
+                <li><a href="https://www.bilibili.com/v/game/" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-pink))] transition-colors">Gaming</a></li>
+                <li><a href="https://www.bilibili.com/v/music/" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-pink))] transition-colors">Música & Covers</a></li>
+                <li><a href="https://www.bilibili.com/v/knowledge/" target="_blank" rel="noopener noreferrer" className="hover:text-[hsl(var(--bili-pink))] transition-colors">Educação</a></li>
               </ul>
             </div>
           </div>
