@@ -314,8 +314,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Discord Card */}
-            <Card className="bg-gradient-to-br from-white/95 to-gray-50/95 border-[#5865f2]/30 rounded-3xl p-8 hover:shadow-2xl hover:shadow-[#5865f2]/20 transition-all duration-500 group backdrop-blur-sm">
-              <CardContent className="p-0 text-center">
+            <Card className="bg-gradient-to-br from-white/95 to-gray-50/95 border-[#5865f2]/30 rounded-3xl p-8 hover:shadow-2xl hover:shadow-[#5865f2]/20 transition-all duration-500 group backdrop-blur-sm h-full">
+              <CardContent className="p-0 text-center h-full flex flex-col">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 bg-[#5865f2] rounded-2xl flex items-center justify-center mx-auto group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-[#5865f2]/50">
                     <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -332,7 +332,7 @@ export default function Home() {
                   <span className="text-lg">💬</span>
                 </h3>
 
-                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
+                <p className="text-gray-700 mb-6 leading-relaxed font-medium flex-grow">
                   🚧 Servidor em construção! Seja um dos primeiros membros do nosso Discord
                   para bater papo sobre anime, gaming e cultura otaku quando estivermos prontos! 
                 </p>
@@ -350,7 +350,7 @@ export default function Home() {
                 </div>
 
                 <Button 
-                  className="w-full bg-[#5865f2] hover:bg-[#4752c4] text-white font-semibold py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#5865f2]/50"
+                  className="w-full bg-[#5865f2] hover:bg-[#4752c4] text-white font-semibold py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#5865f2]/50 mt-auto"
                   onClick={() => window.open('https://discord.gg/MDGtsbR3', '_blank')}
                 >
                   <svg className="w-5 h-5 mr-2" />
@@ -360,8 +360,8 @@ export default function Home() {
             </Card>
 
             {/* X (Twitter) Card */}
-            <Card className="bg-gradient-to-br from-white/95 to-gray-50/95 border-gray-300 rounded-3xl p-8 hover:shadow-2xl hover:shadow-black/30 transition-all duration-500 group backdrop-blur-sm">
-              <CardContent className="p-0 text-center">
+            <Card className="bg-gradient-to-br from-white/95 to-gray-50/95 border-gray-300 rounded-3xl p-8 hover:shadow-2xl hover:shadow-black/30 transition-all duration-500 group backdrop-blur-sm h-full">
+              <CardContent className="p-0 text-center h-full flex flex-col">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mx-auto group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-black/50">
                     <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -378,7 +378,7 @@ export default function Home() {
                   <span className="text-lg">🐦</span>
                 </h3>
 
-                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
+                <p className="text-gray-700 mb-6 leading-relaxed font-medium flex-grow">
                   Siga nosso X para acompanhar o time de LoL do Bilibili Gaming, 
                   novidades dos campeonatos e updates da comunidade gamer! 
                 </p>
@@ -396,7 +396,7 @@ export default function Home() {
                 </div>
 
                 <Button 
-                  className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-black/50 border border-gray-700"
+                  className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-black/50 border border-gray-700 mt-auto"
                   onClick={() => window.open('https://x.com/BilibiliBR', '_blank')}
                 >
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
