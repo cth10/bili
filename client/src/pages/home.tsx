@@ -41,24 +41,24 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-16 bg-white">
+      <section id="sobre" className="py-16 bg-white" aria-labelledby="historia-heading">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold gradient-text mb-4">História do Bilibili</h2>
+            <h2 id="historia-heading" className="text-4xl font-bold gradient-text mb-4">História do Bilibili</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Conheça a jornada de uma das plataformas mais inovadoras da internet
+              Conheça a jornada de uma das plataformas mais inovadoras da internet para cultura otaku, anime e gaming
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bili-card rounded-2xl p-8 text-center group hover:shadow-xl transition-all duration-300">
+            <Card className="bili-card rounded-2xl p-8 text-center group hover:shadow-xl transition-all duration-300" role="article">
               <CardContent className="p-0">
-                <div className="w-16 h-16 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse-glow">
-                  <span className="text-white text-2xl font-bold">2009</span>
+                <div className="w-16 h-16 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse-glow" aria-hidden="true">
+                  <time className="text-white text-2xl font-bold" dateTime="2009">2009</time>
                 </div>
-                <h3 className="text-xl font-semibold bili-dark mb-3">Fundação</h3>
+                <h3 className="text-xl font-semibold bili-dark mb-3">Fundação do Bilibili</h3>
                 <p className="text-gray-600">
-                  Criado como um site de compartilhamento de vídeos focado em anime e cultura ACG (Anime, Comic, Game)
+                  Criado como um site de compartilhamento de vídeos focado em anime e cultura ACG (Anime, Comic, Game), revolucionando o entretenimento otaku
                 </p>
               </CardContent>
             </Card>
