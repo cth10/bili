@@ -271,7 +271,7 @@ export default function Home() {
                     Conectando fãs ao redor do mundo
                   </p>
                 </div>
-              </div></div>
+              </div>
               
               <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                 <div>
