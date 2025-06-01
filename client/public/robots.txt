@@ -4,4 +4,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://bilibili-brasil.com/sitemap.xml
+Sitemap: https://bilibili.com.br/sitemap.xml
