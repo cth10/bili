@@ -1,0 +1,23 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Replit specific files
+.replit
+.config/
+
+# Attached assets (development only)
+attached_assets/
+
+# Generated files
+generated-icon.png
+
+# Environment and development files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
