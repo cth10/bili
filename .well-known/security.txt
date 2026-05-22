@@ -1,0 +1,3 @@
+Contact: https://bilibili.com.br/#contato
+Expires: 2025-12-31T23:59:59Z
+Preferred-Languages: pt-BR, en

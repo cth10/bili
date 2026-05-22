@@ -1,0 +1,13 @@
+/* TEAM */
+  Site: Bilibili Brasil
+  URL: https://bilibili.com.br/
+  Language: Portuguese (Brazil)
+
+/* THANKS */
+  Bilibili Inc. - https://www.bilibili.com
+
+/* SITE */
+  Last update: 2024/06/15
+  Standards: HTML5, CSS3, ES2020
+  Components: React, Vite, Tailwind CSS
+  Software: Node.js

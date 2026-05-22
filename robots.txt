@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
+Disallow: /.well-known/
+
+# Crawl-delay: 10
 
 Sitemap: https://bilibili.com.br/sitemap.xml

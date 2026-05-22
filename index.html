@@ -1,66 +1,114 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <title>
-      Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku
-    </title>
-    <meta
-      name="description"
-      content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação. Conecte-se com milhões de fãs brasileiros da cultura ACG."
-    />
-    <meta
-      name="keywords"
-      content="bilibili, anime, gaming, otaku, cultura, vídeos, brasil, ACG, manga, música, covers, educação, streaming"
-    />
+    <title>Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku</title>
+    <meta name="description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação. Conecte-se com milhões de fãs brasileiros da cultura ACG." />
+    <meta name="keywords" content="bilibili, anime, gaming, otaku, cultura, vídeos, brasil, ACG, manga, música, covers, educação, streaming" />
     <meta name="author" content="Bilibili Brasil" />
-    <meta
-      name="robots"
-      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-    />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="language" content="Portuguese" />
-    <meta name="revisit-after" content="7 days" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bilibili.com.br/" />
-    <meta
-      property="og:title"
-      content="Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku"
-    />
-    <meta
-      property="og:description"
-      content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação. Conecte-se com milhões de fãs brasileiros da cultura ACG."
-    />
-    <meta property="og:image" content="https://bilibili.com.br/logo.png" />
+    <meta property="og:title" content="Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku" />
+    <meta property="og:description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação. Conecte-se com milhões de fãs brasileiros da cultura ACG." />
+    <meta property="og:image" content="https://bilibili.com.br/assets/icons/logo.webp" />
     <meta property="og:site_name" content="Bilibili Brasil" />
     <meta property="og:locale" content="pt_BR" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://bilibili.com.br/" />
-    <meta
-      property="twitter:title"
-      content="Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku"
-    />
-    <meta
-      property="twitter:description"
-      content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação."
-    />
-    <meta property="twitter:image" content="https://bilibili.com.br/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://bilibili.com.br/" />
+    <meta name="twitter:title" content="Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku" />
+    <meta name="twitter:description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação." />
+    <meta name="twitter:image" content="https://bilibili.com.br/assets/icons/logo.webp" />
+    <meta name="twitter:site" content="@bilibili" />
+    <meta name="twitter:creator" content="@bilibili" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://bilibili.com.br/" />
 
+    <!-- Performance: Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#00A1D6" />
+    <meta name="msapplication-TileColor" content="#00A1D6" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="icon" type="image/png" href="./assets/icons/logo.png" />
+    <link rel="icon" type="image/webp" href="./assets/icons/logo.webp" />
+    <link rel="apple-touch-icon" href="./assets/icons/logo.webp" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Bilibili Brasil" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+              display: ['Outfit', 'Inter', 'sans-serif'],
+            },
+            colors: {
+              bili: {
+                blue: '#00A1D6',
+                pink: '#FB7299',
+                light: '#E6F7FC',
+                dark: '#18191C',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-slow': 'float 8s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 2s infinite',
+              'pulse-glow': 'pulse-glow 3s ease-in-out infinite alternate',
+              'gradient-x': 'gradient-x 8s ease infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'bounce-slight': 'bounce-slight 2s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                '50%': { transform: 'translateY(-20px) rotate(2deg)' },
+              },
+              'pulse-glow': {
+                '0%': { opacity: '0.4', transform: 'scale(0.95)' },
+                '100%': { opacity: '0.8', transform: 'scale(1.05)' },
+              },
+              'gradient-x': {
+                '0%, 100%': { 'background-position': '0% 50%' },
+                '50%': { 'background-position': '100% 50%' },
+              },
+              'bounce-slight': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-6px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="./css/styles.css" />
 
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -80,25 +128,1248 @@
           "name": "Bilibili Brasil",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://bilibili.com.br/logo.png"
+            "url": "https://bilibili.com.br/assets/icons/logo.webp"
           }
         }
       }
     </script>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" crossorigin src="/assets/index-DQD06rRL.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BEIf9--T.css">
+    <!-- Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').catch(function() {});
+        });
+      }
+    </script>
   </head>
-  <body>
-    <div id="root"></div>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script
-      type="text/javascript"
-      src="https://replit.com/public/js/replit-dev-banner.js"
-    ></script>
+
+  <body class="min-h-screen antialiased">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header id="main-header" class="fixed top-0 w-full z-50 glass-header transition-all duration-500">
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <a href="#inicio" class="flex items-center space-x-3 flex-shrink-0 group">
+            <div class="relative">
+              <img src="./assets/icons/logo.webp" alt="Bilibili Logo" class="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+              <div class="absolute inset-0 bg-[hsl(var(--bili-blue))] rounded-lg opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300"></div>
+            </div>
+            <span class="text-lg sm:text-xl font-bold gradient-text whitespace-nowrap font-display">Bilibili Brasil</span>
+          </a>
+
+          <div class="hidden lg:flex items-center space-x-1 xl:space-x-2" id="desktop-nav">
+            <a href="#inicio" data-section="inicio" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-blue">Início</a>
+            <a href="#sobre" data-section="sobre" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Sobre</a>
+            <a href="#mascotes" data-section="mascotes" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Mascotes</a>
+            <a href="#funcionalidades" data-section="funcionalidades" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Recursos</a>
+            <a href="#jogos" data-section="jogos" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Jogos</a>
+            <a href="#internacional" data-section="internacional" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Bilibili.tv</a>
+            <a href="#tutorial" data-section="tutorial" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Tutorial</a>
+            <a href="#comunidade" data-section="comunidade" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Comunidade</a>
+          </div>
+
+          <div class="flex items-center space-x-3">
+            <div class="lg:hidden">
+              <button id="mobile-menu-btn" class="p-2 rounded-lg bili-dark hover:bg-bili-light/50 transition-colors duration-200" aria-label="Toggle menu" type="button">
+                <i data-lucide="menu" class="h-6 w-6"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
+          <div class="py-4 space-y-1 border-t border-[hsl(var(--bili-blue))]/10">
+            <a href="#inicio" data-section="inicio" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-blue">Início</a>
+            <a href="#sobre" data-section="sobre" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Sobre</a>
+            <a href="#mascotes" data-section="mascotes" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Mascotes</a>
+            <a href="#funcionalidades" data-section="funcionalidades" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Recursos</a>
+            <a href="#jogos" data-section="jogos" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Jogos</a>
+            <a href="#internacional" data-section="internacional" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Bilibili.tv</a>
+            <a href="#tutorial" data-section="tutorial" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Tutorial</a>
+            <a href="#comunidade" data-section="comunidade" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Comunidade</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="pt-24 lg:pt-32 pb-16 lg:pb-24 min-h-screen flex items-center relative overflow-hidden">
+      <!-- Background decorations -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="blob w-96 h-96 bg-[hsl(var(--bili-blue))] top-[-10%] left-[-10%] animate-float-slow"></div>
+        <div class="blob w-80 h-80 bg-[hsl(var(--bili-pink))] bottom-[-10%] right-[-10%] animate-float-delayed"></div>
+        <div class="blob w-64 h-64 bg-purple-400 top-[40%] right-[20%] animate-float opacity-20"></div>
+        <!-- Grid pattern -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0); background-size: 40px 40px;"></div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="space-y-8 text-center lg:text-left">
+            <div class="reveal-left">
+              <span class="inline-flex items-center px-4 py-2 rounded-full bg-bili-light text-[hsl(var(--bili-blue))] text-sm font-semibold mb-4 border border-[hsl(var(--bili-blue))]/10">
+                <span class="w-2 h-2 bg-[hsl(var(--bili-blue))] rounded-full mr-2 animate-pulse"></span>
+                A maior comunidade otaku do Brasil
+              </span>
+              <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] font-display">
+                <span class="gradient-text-animated block">Descubra o Bilibili</span>
+                <span class="block text-[hsl(var(--foreground))] mt-2">Anime, Gaming &amp; Cultura Otaku</span>
+              </h1>
+            </div>
+            <p class="text-lg sm:text-xl text-[hsl(var(--muted-foreground))] leading-relaxed max-w-xl mx-auto lg:mx-0 reveal" style="transition-delay: 0.1s;">
+              A maior plataforma de vídeos da China dedicada à cultura otaku, gaming, anime e muito mais. Explore um universo de conteúdo criativo e conecte-se com milhões de fãs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start reveal" style="transition-delay: 0.2s;">
+              <a href="#tutorial" class="btn-glow inline-flex items-center justify-center gradient-bg-animated text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-xl hover:shadow-[hsl(var(--bili-blue))]/20 transition-all duration-300 transform hover:-translate-y-1 group">
+                Criar Minha Conta
+                <i data-lucide="arrow-right" class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+              </a>
+              <a href="#sobre" class="inline-flex items-center justify-center border-2 border-[hsl(var(--bili-pink))] text-[hsl(var(--bili-pink))] px-8 py-4 rounded-2xl font-semibold hover:bg-[hsl(var(--bili-pink))] hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-[hsl(var(--bili-pink))]/20">
+                Saiba Mais
+              </a>
+            </div>
+            <div class="flex items-center justify-center lg:justify-start gap-6 text-sm text-[hsl(var(--muted-foreground))] reveal" style="transition-delay: 0.3s;">
+              <div class="flex items-center gap-2">
+                <i data-lucide="users" class="w-4 h-4 text-[hsl(var(--bili-blue))]"></i>
+                <span>200M+ usuários</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="play-circle" class="w-4 h-4 text-[hsl(var(--bili-pink))]"></i>
+                <span>500M+ vídeos</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="globe" class="w-4 h-4 text-purple-500"></i>
+                <span>Global</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center items-center relative reveal-scale">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-r from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] opacity-10 blur-3xl animate-pulse-glow"></div>
+            </div>
+            <img src="./assets/images/mascots/2233bilibili.webp" alt="Mascote 22" class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain animate-float drop-shadow-2xl" loading="eager" />
+            <!-- Floating badges -->
+            <div class="absolute top-4 right-4 sm:top-8 sm:right-8 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg shadow-black/5 border border-gray-100 px-4 py-3 animate-bounce-slight">
+              <div class="flex items-center gap-2.5">
+                <span class="text-2xl">🎮</span>
+                <div>
+                  <div class="text-xs text-[hsl(var(--muted-foreground))] font-medium">Gaming</div>
+                  <div class="text-sm font-bold text-[hsl(var(--foreground))]">Lives 24/7</div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute bottom-8 left-0 sm:bottom-12 sm:left-4 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg shadow-black/5 border border-gray-100 px-4 py-3 animate-bounce-slight" style="animation-delay: 1s;">
+              <div class="flex items-center gap-2.5">
+                <span class="text-2xl">✨</span>
+                <div>
+                  <div class="text-xs text-[hsl(var(--muted-foreground))] font-medium">Danmaku</div>
+                  <div class="text-sm font-bold text-[hsl(var(--foreground))]">Chat em tempo real</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[hsl(var(--muted-foreground))] animate-bounce">
+        <span class="text-xs font-medium">Role para explorar</span>
+        <i data-lucide="chevron-down" class="w-5 h-5"></i>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 lg:py-28 relative" aria-labelledby="historia-heading">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-bili-light text-[hsl(var(--bili-blue))] text-sm font-semibold mb-4">Nossa História</span>
+          <h2 id="historia-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4 font-display">História do Bilibili</h2>
+          <p class="text-lg sm:text-xl text-[hsl(var(--muted-foreground))] max-w-3xl mx-auto">Conheça a jornada de uma das plataformas mais inovadoras da internet para cultura otaku, anime e gaming</p>
+        </div>
+
+        <div class="relative timeline-line max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-0">
+            <!-- Item 1 -->
+            <div class="reveal-left md:text-right md:pr-12">
+              <div class="bili-card rounded-2xl p-6 lg:p-8 card-shine relative">
+                <div class="absolute -right-[3.25rem] top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-blue))]/30 hidden md:flex z-10">
+                  <time class="text-white text-lg font-bold" datetime="2009">09</time>
+                </div>
+                <div class="flex md:justify-end mb-4">
+                  <div class="w-14 h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-blue))]/20 md:hidden">
+                    <time class="text-white text-xl font-bold" datetime="2009">09</time>
+                  </div>
+                  <span class="hidden md:inline-flex items-center px-3 py-1 rounded-full bg-bili-light text-[hsl(var(--bili-blue))] text-xs font-bold">2009</span>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-bold bili-dark mb-3 font-display">Fundação do Bilibili</h3>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Criado como um site de compartilhamento de vídeos focado em anime e cultura ACG (Anime, Comic, Game), revolucionando o entretenimento otaku</p>
+              </div>
+            </div>
+            <div class="hidden md:block"></div>
+
+            <!-- Item 2 -->
+            <div class="hidden md:block"></div>
+            <div class="reveal-right md:pl-12">
+              <div class="bili-card rounded-2xl p-6 lg:p-8 card-shine relative">
+                <div class="absolute -left-[3.25rem] top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-pink))] to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-pink))]/30 hidden md:flex z-10">
+                  <i data-lucide="rocket" class="text-white w-5 h-5"></i>
+                </div>
+                <div class="flex md:justify-start mb-4">
+                  <div class="w-14 h-14 bg-gradient-to-r from-[hsl(var(--bili-pink))] to-pink-500 rounded-2xl flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-pink))]/20 md:hidden">
+                    <i data-lucide="rocket" class="text-white w-5 h-5"></i>
+                  </div>
+                  <span class="hidden md:inline-flex items-center px-3 py-1 rounded-full bg-pink-50 text-[hsl(var(--bili-pink))] text-xs font-bold ml-3">Crescimento</span>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-bold bili-dark mb-3 font-display">Crescimento</h3>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Expandiu para incluir gaming, música, tecnologia e conteúdo educacional, atraindo milhões de usuários</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="reveal-left md:text-right md:pr-12">
+              <div class="bili-card rounded-2xl p-6 lg:p-8 card-shine relative">
+                <div class="absolute -right-[3.25rem] top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-purple-500 to-[hsl(var(--bili-pink))] rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30 hidden md:flex z-10">
+                  <i data-lucide="sparkles" class="text-white w-5 h-5"></i>
+                </div>
+                <div class="flex md:justify-end mb-4">
+                  <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-[hsl(var(--bili-pink))] rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20 md:hidden">
+                    <i data-lucide="sparkles" class="text-white w-5 h-5"></i>
+                  </div>
+                  <span class="hidden md:inline-flex items-center px-3 py-1 rounded-full bg-purple-50 text-purple-600 text-xs font-bold">Hoje</span>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-bold bili-dark mb-3 font-display">Hoje</h3>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Uma das maiores plataformas de vídeo da China, com foco em comunidade e interação única</p>
+              </div>
+            </div>
+            <div class="hidden md:block"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mascotes -->
+    <section id="mascotes" class="py-20 lg:py-28 relative overflow-hidden bg-white">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="blob w-72 h-72 bg-white top-0 right-0 opacity-10 animate-float-slow"></div>
+        <div class="blob w-64 h-64 bg-white bottom-0 left-0 opacity-10 animate-float"></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-pink-50 text-[hsl(var(--bili-pink))] text-sm font-semibold mb-4">Personagens Oficiais</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4 font-display">Conheça os Mascotes</h2>
+          <p class="text-lg sm:text-xl text-[hsl(var(--muted-foreground))]">22 e 33, os adoráveis mascotes do Bilibili</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto stagger-children">
+          <div class="bili-card rounded-3xl p-8 lg:p-10 text-center group card-shine reveal-scale">
+            <div class="flex justify-center mb-6">
+              <div class="relative">
+                <img src="./assets/images/mascots/bilibili-22.webp" alt="Mascote 22" class="relative w-36 h-36 lg:w-44 lg:h-44 object-contain group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500" loading="lazy" />
+              </div>
+            </div>
+            <h3 class="text-2xl lg:text-3xl font-bold bili-blue mb-4 font-display">Mascote 22</h3>
+            <p class="text-[hsl(var(--muted-foreground))] mb-6 leading-relaxed">O mascote azul representa a energia e criatividade da comunidade Bilibili. Sua cor azul simboliza a vastidão do conhecimento e entretenimento disponível na plataforma.</p>
+            <div class="flex justify-center gap-3 flex-wrap">
+              <span class="px-4 py-2 bg-[hsl(var(--bili-blue))] text-white rounded-full text-sm font-medium shadow-lg shadow-[hsl(var(--bili-blue))]/20">Criativo</span>
+              <span class="px-4 py-2 bg-[hsl(var(--bili-blue))] text-white rounded-full text-sm font-medium shadow-lg shadow-[hsl(var(--bili-blue))]/20">Energético</span>
+            </div>
+          </div>
+          <div class="bili-card rounded-3xl p-8 lg:p-10 text-center group card-shine reveal-scale">
+            <div class="flex justify-center mb-6">
+              <div class="relative">
+                <img src="./assets/images/mascots/bilibili-33-.webp" alt="Mascote 33" class="relative w-36 h-36 lg:w-44 lg:h-44 object-contain group-hover:scale-110 group-hover:rotate-3 transition-all duration-500" loading="lazy" />
+              </div>
+            </div>
+            <h3 class="text-2xl lg:text-3xl font-bold bili-pink mb-4 font-display">Mascote 33</h3>
+            <p class="text-[hsl(var(--muted-foreground))] mb-6 leading-relaxed">O mascote rosa representa o lado mais emotivo e expressivo da comunidade. Sua cor rosa simboliza a paixão e o amor pela cultura otaku que une todos os usuários.</p>
+            <div class="flex justify-center gap-3 flex-wrap">
+              <span class="px-4 py-2 bg-[hsl(var(--bili-pink))] text-white rounded-full text-sm font-medium shadow-lg shadow-[hsl(var(--bili-pink))]/20">Expressivo</span>
+              <span class="px-4 py-2 bg-[hsl(var(--bili-pink))] text-white rounded-full text-sm font-medium shadow-lg shadow-[hsl(var(--bili-pink))]/20">Apaixonado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="py-20 lg:py-28 relative">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-bili-light text-[hsl(var(--bili-blue))] text-sm font-semibold mb-4">O que nos torna únicos</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4 font-display">Principais Funcionalidades</h2>
+          <p class="text-lg sm:text-xl text-[hsl(var(--muted-foreground))]">Descubra o que torna o Bilibili único</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 stagger-children">
+          <div class="bili-card rounded-2xl p-6 lg:p-8 group card-shine reveal">
+            <div class="w-14 h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-2xl flex items-center justify-center mb-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+              <i data-lucide="message-circle" class="text-white w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold bili-dark mb-3 font-display">Danmaku (Barrage)</h3>
+            <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Sistema único de comentários que aparecem diretamente no vídeo, criando uma experiência interativa em tempo real.</p>
+          </div>
+          <div class="bili-card rounded-2xl p-6 lg:p-8 group card-shine reveal">
+            <div class="w-14 h-14 bg-gradient-to-r from-[hsl(var(--bili-pink))] to-pink-500 rounded-2xl flex items-center justify-center mb-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-[hsl(var(--bili-pink))]/20">
+              <i data-lucide="gamepad-2" class="text-white w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold bili-dark mb-3 font-display">Gaming</h3>
+            <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Lives de jogos, tutoriais, reviews e uma comunidade vibrante de gamers compartilhando suas experiências.</p>
+          </div>
+          <div class="bili-card rounded-2xl p-6 lg:p-8 group card-shine reveal">
+            <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-[hsl(var(--bili-pink))] rounded-2xl flex items-center justify-center mb-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-purple-500/20">
+              <i data-lucide="flag" class="text-white w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold bili-dark mb-3 font-display">Anime &amp; Manga</h3>
+            <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Vasto acervo de animes licenciados, discussões sobre mangás e conteúdo criado por fãs da cultura japonesa.</p>
+          </div>
+          <div class="bili-card rounded-2xl p-6 lg:p-8 group card-shine reveal">
+            <div class="w-14 h-14 bg-gradient-to-r from-green-500 to-[hsl(var(--bili-blue))] rounded-2xl flex items-center justify-center mb-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-green-500/20">
+              <i data-lucide="music" class="text-white w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold bili-dark mb-3 font-display">Música</h3>
+            <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Covers, composições originais, Vocaloid e performances ao vivo de artistas independentes e estabelecidos.</p>
+          </div>
+          <div class="bili-card rounded-2xl p-6 lg:p-8 group card-shine reveal">
+            <div class="w-14 h-14 bg-gradient-to-r from-orange-500 to-[hsl(var(--bili-pink))] rounded-2xl flex items-center justify-center mb-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-orange-500/20">
+              <i data-lucide="book-open" class="text-white w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold bili-dark mb-3 font-display">Educação</h3>
+            <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Tutoriais, aulas universitárias, cursos de programação e conteúdo educacional de alta qualidade.</p>
+          </div>
+          <div class="bili-card rounded-2xl p-6 lg:p-8 group card-shine reveal">
+            <div class="w-14 h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-purple-500 rounded-2xl flex items-center justify-center mb-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+              <i data-lucide="smartphone" class="text-white w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold bili-dark mb-3 font-display">Lives</h3>
+            <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Transmissões ao vivo interativas com sistema de presentes virtuais e chat em tempo real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jogos -->
+    <section id="jogos" class="py-20 lg:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-indigo-50/50 to-cyan-50/50"></div>
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="blob w-96 h-96 bg-purple-400 top-[-20%] right-[-10%] opacity-10 animate-float-slow"></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-12 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-purple-600 text-sm font-semibold mb-4">Steam Publisher</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4 font-display">Bilibili Gaming: Publicadora na Steam</h2>
+          <p class="text-lg sm:text-xl text-[hsl(var(--muted-foreground))] max-w-3xl mx-auto">A Bilibili não é apenas uma plataforma de vídeos! Também é uma publicadora de jogos e está na Steam.</p>
+        </div>
+        <div class="max-w-4xl mx-auto mb-16 reveal">
+          <div class="bili-card rounded-3xl p-8 lg:p-10 shadow-xl border border-purple-100/50 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+            <p class="text-[hsl(var(--foreground))] text-lg leading-relaxed mb-6 relative z-10">No contexto da Steam, a Bilibili atua como uma publicadora de jogos. Isso significa que ela financia e promove o lançamento de diversos títulos na plataforma de jogos da Valve.</p>
+            <p class="text-[hsl(var(--foreground))] text-lg leading-relaxed mb-8 relative z-10">Alguns exemplos de jogos publicados pela Bilibili na Steam incluem "Magicraft" e "Matchless Kungfu".</p>
+            <div class="text-center relative z-10">
+              <a href="https://store.steampowered.com/publisher/bilibili" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-700 text-white hover:from-purple-700 hover:to-indigo-800 font-semibold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25 group">
+                <i data-lucide="gamepad-2" class="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform"></i> Ver Jogos na Steam
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internacional -->
+    <section id="internacional" class="py-20 lg:py-28 relative overflow-hidden international-section">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-50/80 via-blue-50/60 to-indigo-50/80"></div>
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="blob w-96 h-96 bg-[hsl(var(--bili-blue))] bottom-[-15%] left-[-10%] opacity-[0.07] animate-float"></div>
+        <div class="blob w-80 h-80 bg-[hsl(var(--bili-pink))] top-[-10%] right-[-5%] opacity-[0.05] animate-float-delayed"></div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-16 lg:mb-20 reveal">
+          <span class="inline-flex items-center px-5 py-2 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-600 text-sm font-bold mb-6 border border-blue-200/50 shadow-sm">
+            <span class="w-2 h-2 bg-[hsl(var(--bili-blue))] rounded-full mr-2 animate-pulse"></span>
+            Versão Global
+          </span>
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text-animated mb-6 font-display tracking-tight">Bilibili.tv</h2>
+          <p class="text-xl sm:text-2xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto leading-relaxed">A forma mais fácil para usuários fora da China acessarem o conteúdo do Bilibili</p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+          <!-- Left Column -->
+          <div class="space-y-6 stagger-children">
+            <!-- Acesso Simplificado -->
+            <div class="international-card reveal-left">
+              <div class="flex items-start gap-5 mb-5">
+                <div class="card-icon bg-gradient-to-br from-[hsl(var(--bili-blue))] to-cyan-400">
+                  <i data-lucide="globe" class="text-white w-7 h-7"></i>
+                </div>
+                <div class="flex-1 pt-1">
+                  <h3 class="text-xl lg:text-2xl font-bold text-[hsl(var(--foreground))] font-display">Acesso Simplificado</h3>
+                  <p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Versão internacional oficial</p>
+                </div>
+              </div>
+              <p class="text-[hsl(var(--muted-foreground))] mb-5 leading-relaxed text-base">O Bilibili.tv é a versão internacional oficial da plataforma, projetada especificamente para usuários fora da China. Oferece uma experiência mais acessível e em inglês.</p>
+              <div class="inline-flex items-center gap-2.5 text-sm font-semibold text-emerald-600 bg-emerald-50/80 border border-emerald-200/50 px-4 py-2.5 rounded-xl">
+                <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
+                Sem necessidade de VPN
+              </div>
+            </div>
+
+            <!-- Limitações -->
+            <div class="international-card reveal-left">
+              <div class="flex items-start gap-5 mb-5">
+                <div class="card-icon bg-gradient-to-br from-amber-400 to-orange-500">
+                  <i data-lucide="alert-triangle" class="text-white w-7 h-7"></i>
+                </div>
+                <div class="flex-1 pt-1">
+                  <h3 class="text-xl lg:text-2xl font-bold text-[hsl(var(--foreground))] font-display">Limitações da Versão</h3>
+                  <p class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Catálogo reduzido</p>
+                </div>
+              </div>
+              <p class="text-[hsl(var(--muted-foreground))] mb-5 leading-relaxed text-base">Embora seja mais acessível, o Bilibili.tv tem um catálogo mais limitado em comparação com a versão chinesa original. Nem todo conteúdo está disponível devido a restrições de licenciamento.</p>
+              <div class="international-feature-list space-y-1">
+                <div class="feature-item">
+                  <span class="feature-dot bg-red-400"></span>
+                  <span class="text-sm text-[hsl(var(--muted-foreground))]">Menos conteúdo criado por usuários</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-dot bg-red-400"></span>
+                  <span class="text-sm text-[hsl(var(--muted-foreground))]">Catálogo de anime reduzido</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-dot bg-red-400"></span>
+                  <span class="text-sm text-[hsl(var(--muted-foreground))]">Funcionalidades limitadas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="space-y-6 stagger-children">
+            <!-- Main CTA Card -->
+            <div class="international-cta-card reveal-scale">
+              <div class="cta-pattern"></div>
+              <div class="relative z-10">
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 backdrop-blur-sm">
+                    <i data-lucide="tv" class="text-white w-7 h-7"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-3xl font-bold font-display">Bilibili.tv</h3>
+                    <p class="text-blue-200 text-sm font-medium">Versão Internacional</p>
+                  </div>
+                </div>
+                <p class="text-blue-50 mb-8 text-lg leading-relaxed">Versão internacional oficial com interface em inglês e acesso facilitado para usuários globais.</p>
+                <div class="space-y-3 mb-8">
+                  <div class="check-item">
+                    <div class="check-circle"><i data-lucide="check" class="w-4 h-4 text-white"></i></div>
+                    <span class="text-white/95 font-medium">Interface em inglês</span>
+                  </div>
+                  <div class="check-item">
+                    <div class="check-circle"><i data-lucide="check" class="w-4 h-4 text-white"></i></div>
+                    <span class="text-white/95 font-medium">Acesso global sem restrições</span>
+                  </div>
+                  <div class="check-item">
+                    <div class="check-circle"><i data-lucide="check" class="w-4 h-4 text-white"></i></div>
+                    <span class="text-white/95 font-medium">Animes licenciados</span>
+                  </div>
+                  <div class="check-item">
+                    <div class="check-circle"><i data-lucide="check" class="w-4 h-4 text-white"></i></div>
+                    <span class="text-white/95 font-medium">Conta gratuita</span>
+                  </div>
+                </div>
+                <a href="https://bilibili.tv" target="_blank" rel="noopener noreferrer" class="cta-button w-full">
+                  <i data-lucide="globe" class="w-5 h-5 relative z-10"></i>
+                  <span class="relative z-10">Acessar Bilibili.tv</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tip Card -->
+            <div class="international-tip-card reveal-scale">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/20 mt-0.5">
+                  <i data-lucide="lightbulb" class="text-white w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-[hsl(var(--foreground))] mb-2">Dica para Brasileiros</h4>
+                  <p class="text-[hsl(var(--muted-foreground))] text-sm leading-relaxed">Se você é novo no universo Bilibili, comece pelo <strong class="text-[hsl(var(--foreground))]">bilibili.tv</strong> para se familiarizar com a plataforma. Depois, se quiser acesso completo ao conteúdo, considere criar uma conta na versão chinesa seguindo nosso tutorial completo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Version Comparison -->
+        <div class="mt-20 lg:mt-24 reveal">
+          <div class="version-compare-section">
+            <div class="cta-pattern"></div>
+            <div class="relative z-10">
+              <h3 class="text-2xl lg:text-4xl font-bold mb-3 text-center font-display text-white">Qual Versão Escolher?</h3>
+              <p class="text-center text-blue-200/80 mb-10 text-lg max-w-xl mx-auto">Compare as duas versões e escolha a ideal para você</p>
+              <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Bilibili.com -->
+                <div class="version-card">
+                  <div class="version-badge bg-blue-500/20 text-blue-300 border border-blue-400/20">
+                    <i data-lucide="flag" class="w-4 h-4"></i>
+                    Bilibili.com
+                  </div>
+                  <p class="text-blue-100/80 text-sm mb-6 text-center leading-relaxed">Versão completa com todo o conteúdo e funcionalidades da plataforma original</p>
+                  <div class="space-y-2.5">
+                    <div class="version-feature text-emerald-300">
+                      <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                      <span>Conteúdo completo</span>
+                    </div>
+                    <div class="version-feature text-emerald-300">
+                      <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                      <span>Todas as funcionalidades</span>
+                    </div>
+                    <div class="version-feature text-emerald-300">
+                      <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                      <span>Comunidade completa</span>
+                    </div>
+                    <div class="version-feature text-amber-300">
+                      <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                      <span>Requer tutorial</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bilibili.tv -->
+                <div class="version-card relative">
+                  <div class="version-badge bg-pink-500/20 text-pink-300 border border-pink-400/20">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    Bilibili.tv
+                  </div>
+                  <p class="text-blue-100/80 text-sm mb-6 text-center leading-relaxed">Versão internacional mais acessível para iniciantes</p>
+                  <div class="space-y-2.5">
+                    <div class="version-feature text-emerald-300">
+                      <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                      <span>Fácil acesso</span>
+                    </div>
+                    <div class="version-feature text-emerald-300">
+                      <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                      <span>Interface em inglês</span>
+                    </div>
+                    <div class="version-feature text-emerald-300">
+                      <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                      <span>Sem complicações</span>
+                    </div>
+                    <div class="version-feature text-amber-300">
+                      <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                      <span>Conteúdo limitado</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comunidade -->
+    <section id="comunidade" class="py-20 lg:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-[hsl(var(--bili-light))]/50 via-white/50 to-pink-50/50"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-pink-50 text-[hsl(var(--bili-pink))] text-sm font-semibold mb-4">Comunidade</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4 font-display">Cultura de Fãs</h2>
+          <p class="text-lg sm:text-xl text-[hsl(var(--muted-foreground))] max-w-3xl mx-auto">Uma comunidade única onde criatividade e paixão se encontram</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="space-y-5 stagger-children">
+            <div class="bili-card rounded-2xl p-6 lg:p-8 reveal-left group card-shine">
+              <h3 class="text-lg lg:text-xl font-semibold bili-dark mb-3 flex items-center">
+                <span class="w-10 h-10 bg-[hsl(var(--bili-blue))] rounded-xl flex items-center justify-center mr-3 shadow-lg shadow-[hsl(var(--bili-blue))]/20 group-hover:scale-110 transition-transform">
+                  <i data-lucide="users" class="text-white w-5 h-5"></i>
+                </span>
+                Comunidade Criativa
+              </h3>
+              <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Milhões de criadores compartilham conteúdo original, desde AMVs e covers musicais até análises profundas de anime e gameplay comentado.</p>
+            </div>
+            <div class="bili-card rounded-2xl p-6 lg:p-8 reveal-left group card-shine">
+              <h3 class="text-lg lg:text-xl font-semibold bili-dark mb-3 flex items-center">
+                <span class="w-10 h-10 bg-[hsl(var(--bili-pink))] rounded-xl flex items-center justify-center mr-3 shadow-lg shadow-[hsl(var(--bili-pink))]/20 group-hover:scale-110 transition-transform">
+                  <i data-lucide="drama" class="text-white w-5 h-5"></i>
+                </span>
+                Cultura UP (Upload)
+              </h3>
+              <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Os "UPs" (criadores de conteúdo) são celebrados e apoiados pela comunidade, criando um ecossistema de entretenimento colaborativo.</p>
+            </div>
+            <div class="bili-card rounded-2xl p-6 lg:p-8 reveal-left group card-shine">
+              <h3 class="text-lg lg:text-xl font-semibold bili-dark mb-3 flex items-center">
+                <span class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform">
+                  <i data-lucide="sparkles" class="text-white w-5 h-5"></i>
+                </span>
+                Interação Única
+              </h3>
+              <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">O sistema de Danmaku permite que os espectadores interajam diretamente com o conteúdo, criando uma experiência coletiva incomparável.</p>
+            </div>
+          </div>
+
+          <div class="text-center reveal-right">
+            <div class="relative inline-block">
+              <div class="absolute inset-0 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] rounded-full blur-3xl opacity-20 animate-pulse-glow"></div>
+              <div class="relative">
+                <div class="flex items-center justify-center">
+                  <img src="./assets/images/mascots/2233.webp" alt="Mascotes 22 e 33" class="w-48 h-48 lg:w-64 lg:h-64 object-contain animate-float" title="Mascotes Bilibili" loading="lazy" />
+                </div>
+                <p class="mt-8 text-xl font-semibold gradient-text text-center px-6 py-3 bg-white/20">
+                  <i data-lucide="sparkles" class="inline mx-1 w-5 h-5"></i> Conectando fãs ao redor do mundo <i data-lucide="sparkles" class="inline mx-1 w-5 h-5"></i>
+                </p>
+              </div>
+            </div>
+            <div class="mt-10 grid grid-cols-3 gap-6">
+              <div class="reveal-scale" style="transition-delay: 0.1s;">
+                <div class="text-2xl sm:text-3xl lg:text-4xl font-bold bili-blue counter-number font-display">200M+</div>
+                <div class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Usuários Ativos</div>
+              </div>
+              <div class="reveal-scale" style="transition-delay: 0.2s;">
+                <div class="text-3xl lg:text-4xl font-bold bili-pink counter-number font-display">500M+</div>
+                <div class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Vídeos</div>
+              </div>
+              <div class="reveal-scale" style="transition-delay: 0.3s;">
+                <div class="text-3xl lg:text-4xl font-bold gradient-text font-display">∞</div>
+                <div class="text-sm text-[hsl(var(--muted-foreground))] mt-1">Criatividade</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Junte-se à Comunidade -->
+    <section class="py-20 lg:py-28 text-white overflow-hidden relative bg-gradient-to-br from-[#0f0f1a] via-[#1a1a2e] to-[#16213e]">
+      <div class="absolute inset-0">
+        <div class="blob w-64 h-64 bg-[hsl(var(--bili-blue))] top-[10%] left-[10%] opacity-10 animate-float-slow"></div>
+        <div class="blob w-80 h-80 bg-[hsl(var(--bili-pink))] bottom-[10%] right-[10%] opacity-10 animate-float-delayed"></div>
+        <div class="blob w-48 h-48 bg-purple-500 top-[50%] left-[50%] opacity-5 animate-float"></div>
+        <!-- Stars / dots pattern -->
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 48px 48px;"></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-4 backdrop-blur-sm border border-white/10">Comunidade Brasileira</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 font-display">
+            <span class="bg-gradient-to-r from-[hsl(var(--bili-blue))] via-purple-400 to-[hsl(var(--bili-pink))] bg-clip-text text-transparent">Junte-se à Nossa Comunidade</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Conecte-se com outros otakus, compartilhe memes, discuta animes e faça parte da família Bilibili Brasil!</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto stagger-children">
+          <!-- Discord -->
+          <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 hover:bg-white/10 hover:border-[#5865f2]/30 transition-all duration-500 group backdrop-blur-sm h-full flex flex-col reveal-scale">
+            <div class="text-center h-full flex flex-col">
+              <div class="relative mb-6 mx-auto">
+                <div class="w-20 h-20 bg-[#5865f2] rounded-2xl flex items-center justify-center group-hover:rotate-6 group-hover:scale-110 transition-all duration-300 shadow-xl shadow-[#5865f2]/30">
+                  <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z" />
+                  </svg>
+                </div>
+                <div class="absolute -top-2 -right-2 w-7 h-7 bg-green-500 rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                  <span class="text-xs text-white font-bold">!</span>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2 font-display">
+                Discord Server <i data-lucide="message-circle" class="w-5 h-5 text-[#5865f2]"></i>
+              </h3>
+              <p class="text-gray-300 mb-6 leading-relaxed font-medium flex-grow">
+                <i data-lucide="construction" class="inline mr-1 w-4 h-4 text-yellow-400"></i> Servidor em construção! Seja um dos primeiros membros do nosso Discord para bater papo sobre anime, gaming e cultura otaku quando estivermos prontos!
+              </p>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-center justify-center text-sm text-gray-400">
+                  <span class="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
+                  <span class="font-medium"><i data-lucide="hammer" class="inline mr-1 w-4 h-4"></i> Em construção - Seja um pioneiro!</span>
+                </div>
+                <div class="flex justify-center gap-4 text-sm text-gray-400">
+                  <span class="flex items-center font-medium"><i data-lucide="flag" class="text-[#5865f2] mr-1 w-4 h-4"></i> Anime</span>
+                  <span class="flex items-center font-medium"><i data-lucide="gamepad-2" class="text-[#5865f2] mr-1 w-4 h-4"></i> Gaming</span>
+                  <span class="flex items-center font-medium"><i data-lucide="music" class="text-[#5865f2] mr-1 w-4 h-4"></i> Música</span>
+                </div>
+              </div>
+              <a href="https://discord.gg/ctJfhy4yew" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-[#5865f2] hover:bg-[#4752c4] text-white font-semibold py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-[#5865f2]/30 mt-auto">
+                <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z" />
+                </svg>
+                Entrar no Discord
+              </a>
+            </div>
+          </div>
+
+          <!-- X -->
+          <div class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 group backdrop-blur-sm h-full flex flex-col reveal-scale">
+            <div class="text-center h-full flex flex-col">
+              <div class="relative mb-6 mx-auto">
+                <div class="w-20 h-20 bg-black rounded-2xl flex items-center justify-center group-hover:rotate-6 group-hover:scale-110 transition-all duration-300 shadow-xl shadow-black/50 border border-white/10">
+                  <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </div>
+                <div class="absolute -top-2 -right-2 w-7 h-7 bg-[hsl(var(--bili-pink))] rounded-full flex items-center justify-center animate-bounce shadow-lg" style="animation-delay: 0.3s;">
+                  <i data-lucide="sparkles" class="text-white w-3 h-3"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2 font-display">
+                Bilibili BR no X
+              </h3>
+              <p class="text-gray-300 mb-6 leading-relaxed font-medium flex-grow">Siga nosso X para acompanhar o time de LoL do Bilibili Gaming, novidades dos campeonatos e updates da comunidade gamer!</p>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-center justify-center text-sm text-gray-400">
+                  <span class="w-2 h-2 bg-[hsl(var(--bili-pink))] rounded-full mr-2 animate-pulse"></span>
+                  <span class="font-medium">Focado no time de LoL do Bilibili</span>
+                </div>
+                <div class="flex justify-center gap-4 text-sm text-gray-400">
+                  <span class="flex items-center font-medium"><i data-lucide="trophy" class="text-[hsl(var(--bili-pink))] mr-1 w-4 h-4"></i> LoL</span>
+                  <span class="flex items-center font-medium"><i data-lucide="zap" class="text-[hsl(var(--bili-pink))] mr-1 w-4 h-4"></i> Esports</span>
+                  <span class="flex items-center font-medium"><i data-lucide="gamepad-2" class="text-[hsl(var(--bili-pink))] mr-1 w-4 h-4"></i> Gaming</span>
+                </div>
+              </div>
+              <a href="https://x.com/BilibiliBR" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-white hover:bg-gray-100 text-black font-semibold py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl mt-auto">
+                <svg class="w-5 h-5 mr-2 inline" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                Seguir no X
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 reveal">
+          <div class="inline-flex items-center justify-center p-1 bg-gradient-to-r from-[hsl(var(--bili-blue))] via-purple-500 to-[hsl(var(--bili-pink))] rounded-full shadow-lg shadow-purple-500/20">
+            <div class="px-8 py-3 bg-[#0f0f1a] rounded-full">
+              <p class="text-white font-medium flex items-center gap-2 text-sm sm:text-base">
+                <i data-lucide="flag" class="w-5 h-5 text-[hsl(var(--bili-blue))]"></i>
+                Seja parte da revolução otaku no Brasil!
+                <i data-lucide="rocket" class="w-5 h-5 text-[hsl(var(--bili-pink))]"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutorial -->
+    <section id="tutorial" class="py-20 lg:py-28 relative">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 lg:mb-16 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-bili-light text-[hsl(var(--bili-blue))] text-sm font-semibold mb-4">Guia Passo a Passo</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-5xl font-bold gradient-text mb-4 font-display">Como usar o Bilibili?</h2>
+          <p class="text-base sm:text-lg lg:text-xl text-[hsl(var(--muted-foreground))] max-w-3xl mx-auto px-4">Tutorial completo para brasileiros: desde criar conta até navegar na plataforma</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto space-y-12 lg:space-y-20">
+          <!-- Parte 1 -->
+          <div>
+            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold gradient-text mb-8 lg:mb-10 text-center px-4 font-display">Parte 1: Criando sua Conta (Bilibili China)</h3>
+            <div class="space-y-8 lg:space-y-10">
+              <!-- Passo 1 -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+                    <span class="text-white font-bold text-lg sm:text-xl">1</span>
+                  </div>
+                  <div class="flex-1 w-full">
+                    <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-3 sm:mb-4 text-center sm:text-left font-display">Acessar o Site Oficial</h4>
+                    <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 leading-relaxed">Primeiro, acesse o site oficial do Bilibili em <strong class="text-[hsl(var(--foreground))]">www.bilibili.com</strong>. Você verá a página inicial em chinês, mas não se preocupe - vamos te guiar por cada etapa.</p>
+                    <div class="bg-blue-50">
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))]"><strong class="text-[hsl(var(--foreground))]">Dica:</strong> Use a tradução automática do seu navegador para facilitar a navegação.</p>
+                    </div>
+                    <div class="text-center mb-4 img-zoom rounded-xl overflow-hidden shadow-lg">
+                      <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Página Inicial do Bilibili</p>
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mb-3">Interface principal que você verá ao acessar</p>
+                      <img src="./assets/images/tutorial/homepage.webp" alt="Página inicial do Bilibili" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Passo 2 -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+                    <span class="text-white font-bold text-lg sm:text-xl">2</span>
+                  </div>
+                  <div class="flex-1 w-full">
+                    <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-3 sm:mb-4 text-center sm:text-left font-display">Encontrar o Botão de Login</h4>
+                    <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 leading-relaxed">No canto superior direito da página, procure pelo botão azul com o texto "登录" (Login). Este botão te levará para a tela de login/registro.</p>
+                    <div class="text-center mb-4 img-zoom rounded-xl overflow-hidden shadow-lg">
+                      <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Localização do Botão de Login</p>
+                      <img src="./assets/images/tutorial/encontrar-botao-login.webp" alt="Botão de login no Bilibili" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mt-2">Botão "登录" (Login) destacado em rosa no canto superior direito</p>
+                    </div>
+                    <div class="bg-yellow-50">
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))]"><strong class="text-[hsl(var(--foreground))]">Localização:</strong> O botão fica sempre no canto superior direito da página, próximo à barra de pesquisa.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Passo 3 -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+                    <span class="text-white font-bold text-lg sm:text-xl">3</span>
+                  </div>
+                  <div class="flex-1 w-full">
+                    <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-3 sm:mb-4 text-center sm:text-left font-display">Escolher Método de Registro</h4>
+                    <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 leading-relaxed">Na tela de login, você verá várias opções. Para criar uma conta nova, você pode escolher entre "短信登录" (Login por SMS) ou registro por e-mail. O SMS é o método mais recomendado atualmente para brasileiros, embora o e-mail também possa funcionar.</p>
+                    <div class="text-center mb-4 sm:mb-6 img-zoom rounded-xl overflow-hidden shadow-lg">
+                      <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Tela de Login do Bilibili</p>
+                      <img src="./assets/images/tutorial/tela-de-login.webp" alt="Tela de login do Bilibili" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mt-2">Tela de login com opções QR Code e SMS</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-4">
+                      <div class="bg-gray-100">
+                        <span class="text-[hsl(var(--muted-foreground))] text-xs sm:text-sm block">扫描二维码登录</span>
+                        <p class="text-xs text-[hsl(var(--muted-foreground))]">QR Code (Skip)</p>
+                      </div>
+                      <div class="bg-[hsl(var(--bili-light))] border-2 border-[hsl(var(--bili-blue))] p-3 rounded-xl text-center">
+                        <span class="text-[hsl(var(--bili-blue))] font-semibold text-xs sm:text-sm block">短信登录</span>
+                        <p class="text-xs text-[hsl(var(--bili-blue))]">SMS (Recomendado)</p>
+                      </div>
+                      <div class="bg-green-50">
+                        <span class="text-green-600 font-semibold text-xs sm:text-sm block">邮箱登录</span>
+                        <p class="text-xs text-green-600">E-mail (Alternativa?)</p>
+                      </div>
+                    </div>
+                    <div class="bg-green-50">
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] leading-relaxed"><strong class="text-[hsl(var(--foreground))]">Por que SMS?</strong> É o método mais confiável para usuários internacionais e não requer aplicativos adicionais.<br /><strong class="text-[hsl(var(--foreground))]">E-mail:</strong> Ao menos antes funcionava, pelo que lembro, criei minha conta com e-mail e linkei o número de celular para confirmar a conta. Mas não sei se ainda dá para utilizar ainda e-mail como usuário, a minha conta foi criada em 2017.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Passo 4 -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+                    <span class="text-white font-bold text-lg sm:text-xl">4</span>
+                  </div>
+                  <div class="flex-1 w-full">
+                    <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-3 sm:mb-4 text-center sm:text-left font-display">Selecionar Brasil (+55) e Inserir Número</h4>
+                    <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 leading-relaxed">Primeiro, clique no campo do código do país (que mostra +86 por padrão) e procure pelo Brasil. Role a lista até encontrar "巴西" (Brasil) com o código <strong class="text-[hsl(var(--foreground))]">+55</strong>. Depois, digite seu número de celular brasileiro <strong class="text-[hsl(var(--foreground))]">SEM</strong> o código do país e SEM o zero inicial.</p>
+                    <div class="text-center mb-4 sm:mb-6 img-zoom rounded-xl overflow-hidden shadow-lg">
+                      <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Seleção do Brasil (+55) e Inserção do Número</p>
+                      <img src="./assets/images/tutorial/inserir-numero-celular.webp" alt="Seleção do Brasil e inserção do número do celular" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mt-2">Campo para selecionar Brasil (+55) e inserir o número do celular</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
+                      <div class="bg-green-50">
+                        <h5 class="font-semibold text-green-700 mb-2 sm:mb-3 text-sm sm:text-base flex items-center"><i data-lucide="check-circle-2" class="mr-1 w-4 h-4"></i> Seleção do País:</h5>
+                        <div class="flex items-center justify-between">
+                          <span class="text-[hsl(var(--foreground))] text-xs sm:text-sm">巴西 (Brasil)</span>
+                          <span class="bg-green-500 text-white px-2 sm:px-3 py-1 rounded-lg font-semibold text-xs sm:text-sm">+55</span>
+                        </div>
+                      </div>
+                      <div class="bg-blue-50">
+                        <h5 class="font-semibold text-blue-700 mb-2 sm:mb-3 text-sm sm:text-base flex items-center"><i data-lucide="smartphone" class="mr-1 w-4 h-4"></i> Formato do Número:</h5>
+                        <div class="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                          <div class="text-red-500 flex items-center gap-1"><i data-lucide="x-circle" class="w-3 h-3"></i> (11) 99999-9999</div>
+                          <div class="text-green-500 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3 h-3"></i> 11999999999</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-yellow-50">
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] leading-relaxed"><strong class="text-[hsl(var(--foreground))]">Exemplo prático:</strong> Se seu número é (11) 99999-9999, primeiro selecione Brasil (+55), depois digite apenas: 11999999999</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Passo 5 -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+                    <span class="text-white font-bold text-lg sm:text-xl">5</span>
+                  </div>
+                  <div class="flex-1 w-full">
+                    <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-3 sm:mb-4 text-center sm:text-left font-display">Verificação por SMS</h4>
+                    <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 leading-relaxed">Após inserir seu número, clique no botão azul para enviar o código de verificação. Você receberá um SMS com um código de 6 dígitos. Digite este código no campo "验证码" (Código de Verificação).</p>
+                    <div class="text-center mb-4 sm:mb-6 img-zoom rounded-xl overflow-hidden shadow-lg">
+                      <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Confirmação do SMS</p>
+                      <img src="./assets/images/tutorial/confirmar-sms-login.webp" alt="Tela de verificação SMS" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                      <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mt-2">Aguardando confirmação do SMS no número brasileiro</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center mb-4 sm:mb-6">
+                      <div class="border-2 border-gray-300 rounded-lg p-2 text-center w-16 text-xs sm:text-sm bg-white">XXX</div>
+                      <div class="border-2 border-gray-300 rounded-lg p-2 text-center w-16 text-xs sm:text-sm bg-white">XXX</div>
+                      <span class="text-[hsl(var(--muted-foreground))] text-sm sm:text-base">→</span>
+                      <div class="bg-[hsl(var(--bili-light))] border-2 border-[hsl(var(--bili-blue))] rounded-lg p-2 text-center">
+                        <span class="text-[hsl(var(--bili-blue))] font-semibold text-xs sm:text-sm">Digite o código SMS</span>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                      <div class="bg-orange-50">
+                        <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] leading-relaxed"><strong class="text-[hsl(var(--foreground))]">Tempo limite:</strong> O código expira em 5 minutos. Se não receber, clique em "重新发送" (Reenviar).</p>
+                      </div>
+                      <div class="bg-purple-50">
+                        <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] leading-relaxed"><strong class="text-[hsl(var(--foreground))]">Problema?</strong> Verifique a caixa de spam do seu celular ou aguarde alguns minutos.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sucesso -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal border-green-200">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-purple-500 to-[hsl(var(--bili-pink))] rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0 shadow-lg shadow-purple-500/20">
+                    <i data-lucide="check" class="text-white w-6 h-6"></i>
+                  </div>
+                  <div class="flex-1 w-full">
+                    <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-3 sm:mb-4 text-center sm:text-left font-display">Conta Criada com Sucesso!</h4>
+                    <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 leading-relaxed">Parabéns! Sua conta foi criada e você já está logado. Agora você pode:</p>
+                    <ul class="list-disc list-inside space-y-1 sm:space-y-2 text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 sm:mb-6">
+                      <li>Assistir vídeos sem limitações</li>
+                      <li>Comentar e interagir com outros usuários</li>
+                      <li>Seguir seus criadores favoritos</li>
+                      <li>Enviar danmaku (comentários flutuantes)</li>
+                      <li>Personalizar seu perfil</li>
+                    </ul>
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 p-4 sm:p-6 rounded-xl">
+                      <h5 class="font-semibold text-[hsl(var(--foreground))] mb-2 sm:mb-3 text-sm sm:text-base flex items-center"><i data-lucide="party-popper" class="mr-1 w-4 h-4 text-[hsl(var(--bili-pink))]"></i> Próximos passos recomendados:</h5>
+                      <div class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-[hsl(var(--muted-foreground))]">
+                        <p>• Complete seu perfil com avatar e biografia</p>
+                        <p>• Explore as diferentes categorias de conteúdo</p>
+                        <p>• Ative as notificações para seus criadores favoritos</p>
+                        <p>• Aprenda a usar o sistema de Danmaku</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parte 2 -->
+          <div>
+            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold gradient-text mb-8 lg:mb-10 text-center px-4 font-display">Parte 2: Navegando na Interface do Bilibili</h3>
+            <div class="space-y-8 lg:space-y-10">
+              <!-- Barra de Navegação -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-4 sm:mb-6 flex items-center font-display"><i data-lucide="compass" class="inline mr-2 w-6 h-6 text-[hsl(var(--bili-blue))]"></i> Barra de Navegação Principal</h4>
+                <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 sm:mb-6 leading-relaxed">A barra superior do Bilibili contém todas as funcionalidades essenciais para navegar na plataforma.</p>
+                <div class="text-center mb-4 sm:mb-6 img-zoom rounded-xl overflow-hidden shadow-lg">
+                  <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Barra de Navegação Principal</p>
+                  <img src="./assets/images/tutorial/barra-de-perfil-1.webp" alt="Barra de navegação principal do Bilibili" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                  <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mt-2">Barra superior com todas as principais funcionalidades</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <div class="space-y-3 sm:space-y-4">
+                    <h5 class="font-semibold text-[hsl(var(--foreground))] text-sm sm:text-base flex items-center"><i data-lucide="clipboard-list" class="mr-1 w-4 h-4 text-[hsl(var(--bili-blue))]"></i> Seções Principais:</h5>
+                    <div class="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+                      <div class="flex items-start gap-2 sm:gap-3">
+                        <i data-lucide="home" class="text-[hsl(var(--bili-blue))] flex-shrink-0 w-4 h-4 mt-0.5"></i>
+                        <div><strong class="text-[hsl(var(--foreground))]">首页 (Início):</strong> Feed principal com vídeos recomendados</div>
+                      </div>
+                      <div class="flex items-start gap-2 sm:gap-3">
+                        <i data-lucide="tv" class="text-[hsl(var(--bili-pink))] flex-shrink-0 w-4 h-4 mt-0.5"></i>
+                        <div><strong class="text-[hsl(var(--foreground))]">番剧 (Anime):</strong> Animes oficiais e séries licenciadas</div>
+                      </div>
+                      <div class="flex items-start gap-2 sm:gap-3">
+                        <i data-lucide="radio" class="text-red-500 flex-shrink-0 w-4 h-4 mt-0.5"></i>
+                        <div><strong class="text-[hsl(var(--foreground))]">直播 (Live):</strong> Transmissões ao vivo</div>
+                      </div>
+                      <div class="flex items-start gap-2 sm:gap-3">
+                        <i data-lucide="gamepad-2" class="text-green-500 flex-shrink-0 w-4 h-4 mt-0.5"></i>
+                        <div><strong class="text-[hsl(var(--foreground))]">游戏 (Games):</strong> Conteúdo relacionado a jogos</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-3 sm:space-y-4">
+                    <h5 class="font-semibold text-[hsl(var(--foreground))] text-sm sm:text-base flex items-center"><i data-lucide="search" class="mr-1 w-4 h-4 text-[hsl(var(--bili-blue))]"></i> Área do Usuário:</h5>
+                    <div class="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+                      <div class="flex items-start gap-2 sm:gap-3">
+                        <i data-lucide="search" class="text-[hsl(var(--muted-foreground))] flex-shrink-0 w-4 h-4 mt-0.5"></i>
+                        <div><strong class="text-[hsl(var(--foreground))]">Barra de Pesquisa:</strong> Busque por vídeos, usuários ou palavras-chave</div>
+                      </div>
+                      <div class="flex items-start gap-2 sm:gap-3">
+                        <i data-lucide="bell" class="text-yellow-500 flex-shrink-0 w-4 h-4 mt-0.5"></i>
+                        <div><strong class="text-[hsl(var(--foreground))]">Notificações:</strong> Alertas de novos vídeos e interações</div>
+                      </div>
+                      <div class="flex items-start gap-2 sm:gap-3">
+                        <i data-lucide="user" class="text-purple-500 flex-shrink-0 w-4 h-4 mt-0.5"></i>
+                        <div><strong class="text-[hsl(var(--foreground))]">Avatar do Perfil:</strong> Acesso rápido às suas configurações</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Seções do Site -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-4 sm:mb-6 flex items-center font-display"><i data-lucide="list" class="mr-2 w-6 h-6 text-[hsl(var(--bili-blue))]"></i> Principais Seções do Site</h4>
+                <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 sm:mb-6">O Bilibili é organizado em diferentes seções para facilitar a navegação e descoberta de conteúdo.</p>
+                <div class="text-center mb-4 sm:mb-6 img-zoom rounded-xl overflow-hidden shadow-lg">
+                  <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Seções Principais do Bilibili</p>
+                  <img src="./assets/images/tutorial/sessoes-do-site.webp" alt="Principais seções do site Bilibili" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                  <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mt-2">Interface mostrando as diferentes categorias e seções</p>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                  <div class="space-y-3 text-sm">
+                    <div><strong class="text-[hsl(var(--foreground))]">首页 (Início):</strong> Página principal</div>
+                    <div><strong class="text-[hsl(var(--foreground))]">番剧 (Anime):</strong> Animes e séries</div>
+                  </div>
+                  <div class="space-y-3 text-sm">
+                    <div><strong class="text-[hsl(var(--foreground))]">直播 (Live):</strong> Transmissões ao vivo</div>
+                    <div><strong class="text-[hsl(var(--foreground))]">游戏中心 (Centro de Games):</strong> Hub de jogos</div>
+                  </div>
+                  <div class="space-y-3 text-sm">
+                    <div><strong class="text-[hsl(var(--foreground))]">会员购 (Loja de Membros):</strong> Loja oficial</div>
+                    <div><strong class="text-[hsl(var(--foreground))]">漫画 (Mangá):</strong> Mangás e quadrinhos</div>
+                  </div>
+                  <div class="space-y-3 text-sm">
+                    <div><strong class="text-[hsl(var(--foreground))]">赛事 (Esports):</strong> Competições e torneios</div>
+                    <div><strong class="text-[hsl(var(--foreground))]">青川 (Qingchuan):</strong> Seção especial</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Menu do Perfil -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-4 sm:mb-6 flex items-center font-display"><i data-lucide="user" class="mr-2 w-6 h-6 text-[hsl(var(--bili-blue))]"></i> Menu do Perfil do Usuário</h4>
+                <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 sm:mb-6">Ao clicar no seu avatar, você acessa o menu do perfil com todas as opções da sua conta.</p>
+                <div class="text-center mb-4 sm:mb-6 img-zoom rounded-xl overflow-hidden shadow-lg">
+                  <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Menu do Perfil</p>
+                  <img src="./assets/images/tutorial/menu-do-perfil.webp" alt="Menu do perfil do usuário no Bilibili" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                  <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mt-2">Menu dropdown com opções da conta do usuário</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
+                  <div class="space-y-4">
+                    <h5 class="font-semibold text-[hsl(var(--foreground))] flex items-center"><i data-lucide="bar-chart-3" class="mr-1 w-4 h-4 text-[hsl(var(--bili-blue))]"></i> Gestão da Conta:</h5>
+                    <div class="space-y-3 text-sm text-[hsl(var(--muted-foreground))]">
+                      <div><strong class="text-[hsl(var(--foreground))]">个人中心 (Centro Pessoal):</strong> Configurações da conta</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">投稿管理 (Gerenciar Uploads):</strong> Seus vídeos enviados</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">创作中心 (Centro de Criação):</strong> Ferramentas para criadores</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">直播中心 (Centro de Live):</strong> Configurar transmissões</div>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h5 class="font-semibold text-[hsl(var(--foreground))] flex items-center"><i data-lucide="target" class="mr-1 w-4 h-4 text-[hsl(var(--bili-pink))]"></i> Funcionalidades:</h5>
+                    <div class="space-y-3 text-sm text-[hsl(var(--muted-foreground))]">
+                      <div><strong class="text-[hsl(var(--foreground))]">收藏夹 (Favoritos):</strong> Vídeos salvos organizados</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">历史记录 (Histórico):</strong> Vídeos assistidos recentemente</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">稍后再看 (Assistir Depois):</strong> Lista de vídeos salvos</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">订阅管理 (Gerenciar Inscrições):</strong> Canais seguidos</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Upload e Criação -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-4 sm:mb-6 flex items-center font-display"><i data-lucide="upload" class="mr-2 w-6 h-6 text-[hsl(var(--bili-blue))]"></i> Sistema de Upload e Criação</h4>
+                <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 sm:mb-6">O Bilibili oferece várias opções para criadores de conteúdo enviarem seus materiais.</p>
+                <div class="text-center mb-4 sm:mb-6 img-zoom rounded-xl overflow-hidden shadow-lg">
+                  <p class="font-semibold text-[hsl(var(--foreground))] mb-2 text-sm sm:text-base">Menu de Upload (投稿)</p>
+                  <img src="./assets/images/tutorial/barra-de-perfil-1.webp" alt="Menu de upload no Bilibili" class="w-full h-auto object-contain max-w-full" loading="lazy" />
+                  <p class="text-xs sm:text-sm text-[hsl(var(--muted-foreground))] mt-2">Menu suspenso que aparece ao passar o mouse sobre o botão "投稿"</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
+                  <div class="space-y-4">
+                    <h5 class="font-semibold text-[hsl(var(--foreground))] flex items-center"><i data-lucide="clapperboard" class="mr-1 w-4 h-4 text-[hsl(var(--bili-blue))]"></i> Tipos de Upload:</h5>
+                    <div class="space-y-3 text-sm">
+                      <div class="flex items-start gap-3">
+                        <i data-lucide="video" class="text-[hsl(var(--bili-blue))] w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                        <div class="text-[hsl(var(--muted-foreground))]"><strong class="text-[hsl(var(--foreground))]">视频投稿 (Shìpín tóugǎo):</strong> Enviar Vídeo - MP4, AVI, MOV até 8GB</div>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <i data-lucide="music" class="text-[hsl(var(--bili-pink))] w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                        <div class="text-[hsl(var(--muted-foreground))]"><strong class="text-[hsl(var(--foreground))]">音频投稿 (Yīnpín tóugǎo):</strong> Enviar Áudio - Músicas, podcasts, covers</div>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <i data-lucide="file-text" class="text-purple-500 w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                        <div class="text-[hsl(var(--muted-foreground))]"><strong class="text-[hsl(var(--foreground))]">专栏投稿 (Zhuānlán tóugǎo):</strong> Enviar Artigo/Coluna - Textos, blogs, análises</div>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <i data-lucide="tag" class="text-orange-500 w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                        <div class="text-[hsl(var(--muted-foreground))]"><strong class="text-[hsl(var(--foreground))]">贴纸投稿 (Tiēzhǐ tóugǎo):</strong> Enviar Sticker/Adesivo - Emojis personalizados</div>
+                      </div>
+                      <div class="flex items-start gap-3">
+                        <i data-lucide="bar-chart-3" class="text-green-500 w-4 h-4 mt-0.5 flex-shrink-0"></i>
+                        <div class="text-[hsl(var(--muted-foreground))]"><strong class="text-[hsl(var(--foreground))]">投稿管理 (Tóugǎo guǎnlǐ):</strong> Gerenciamento de Envios - Controle seus uploads</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h5 class="font-semibold text-[hsl(var(--foreground))] flex items-center"><i data-lucide="cog" class="mr-1 w-4 h-4 text-[hsl(var(--bili-blue))]"></i> Configurações:</h5>
+                    <div class="space-y-3 text-sm text-[hsl(var(--muted-foreground))]">
+                      <div><strong class="text-[hsl(var(--foreground))]">Título e Descrição:</strong> Em chinês ou inglês para maior alcance</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">Categorias:</strong> Escolha a categoria correta para o algoritmo</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">Tags:</strong> Use tags relevantes para descobrimento</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">Thumbnail:</strong> Imagem de capa atrativa 1280x720</div>
+                      <div><strong class="text-[hsl(var(--foreground))]">Privacidade:</strong> Público, não listado ou privado</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sistema de Interações -->
+              <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 card-shine reveal">
+                <h4 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-4 sm:mb-6 flex items-center font-display"><i data-lucide="heart" class="mr-2 w-6 h-6 text-[hsl(var(--bili-pink))]"></i> Sistema Único de Interações</h4>
+                <p class="text-sm sm:text-base text-[hsl(var(--muted-foreground))] mb-4 sm:mb-6">O Bilibili possui um sistema de engajamento diferente de outras plataformas, com recursos únicos.</p>
+                <div class="grid md:grid-cols-2 gap-4 sm:gap-8">
+                  <div class="space-y-6">
+                    <div class="bg-gradient-to-br from-red-50 to-pink-50 border border-red-200 rounded-xl p-6">
+                      <h5 class="font-semibold text-red-700 mb-4 flex items-center"><i data-lucide="thumbs-up" class="text-xl mr-2 w-5 h-5"></i> Reações e Engajamento</h5>
+                      <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-between">
+                          <span>点赞 (Like):</span>
+                          <span class="bg-red-100"><i data-lucide="thumbs-up" class="w-3 h-3"></i> Curtir</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <span>投币 (Moeda):</span>
+                          <span class="bg-yellow-100">🪙 Doar</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <span>收藏 (Favoritar):</span>
+                          <span class="bg-blue-100">⭐ Salvar</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <span>分享 (Compartilhar):</span>
+                          <span class="bg-green-100"><i data-lucide="share-2" class="w-3 h-3"></i> Share</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-6">
+                      <h5 class="font-semibold text-blue-700 mb-4 flex items-center"><i data-lucide="message-circle" class="text-xl mr-2 w-5 h-5"></i> Sistema Danmaku</h5>
+                      <div class="space-y-3 text-sm text-[hsl(var(--muted-foreground))]">
+                        <div><strong class="text-[hsl(var(--foreground))]">弹幕 (Danmaku):</strong> Comentários flutuantes sincronizados</div>
+                        <div><strong class="text-[hsl(var(--foreground))]">评论 (Comentários):</strong> Sistema tradicional abaixo do vídeo</div>
+                        <div><strong class="text-[hsl(var(--foreground))]">实时互动:</strong> Interação em tempo real durante lives</div>
+                        <div><strong class="text-[hsl(var(--foreground))]">表情包:</strong> Emojis e stickers personalizados</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-6">
+                    <div class="bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200 rounded-xl p-6">
+                      <h5 class="font-semibold text-purple-700 mb-4 flex items-center"><span class="text-xl mr-2">🪙</span> Sistema de Moedas</h5>
+                      <div class="space-y-3 text-sm text-[hsl(var(--muted-foreground))]">
+                        <p><strong class="text-[hsl(var(--foreground))]">O que são:</strong> Moedas virtuais para apoiar criadores</p>
+                        <p><strong class="text-[hsl(var(--foreground))]">Como obter:</strong> Login diário, tarefas, compras</p>
+                        <p><strong class="text-[hsl(var(--foreground))]">Como usar:</strong> "Doar" para vídeos favoritos</p>
+                        <p><strong class="text-[hsl(var(--foreground))]">Benefício:</strong> Aumenta alcance do conteúdo</p>
+                      </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6">
+                      <h5 class="font-semibold text-green-700 mb-4 flex items-center"><span class="text-xl mr-2">⭐</span> Coleções e Favoritos</h5>
+                      <div class="space-y-3 text-sm text-[hsl(var(--muted-foreground))]">
+                        <p><strong class="text-[hsl(var(--foreground))]">收藏夹 (Coleções):</strong> Organize vídeos em pastas</p>
+                        <p><strong class="text-[hsl(var(--foreground))]">公开/私密:</strong> Listas públicas ou privadas</p>
+                        <p><strong class="text-[hsl(var(--foreground))]">分享:</strong> Compartilhe coleções com amigos</p>
+                        <p><strong class="text-[hsl(var(--foreground))]">标签:</strong> Use tags para organizar melhor</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dicas -->
+          <div class="bili-card rounded-2xl p-5 sm:p-6 lg:p-8 bg-gradient-to-r from-[hsl(var(--bili-light))] to-pink-50 border-[hsl(var(--bili-blue))]/10 reveal">
+            <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold bili-dark mb-4 sm:mb-6 text-center flex items-center justify-center font-display"><i data-lucide="target" class="inline mr-2 w-5 h-5 text-[hsl(var(--bili-blue))]"></i> Dicas Importantes para Brasileiros</h3>
+            <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="text-green-500 text-xl flex-shrink-0 w-5 h-5 mt-0.5"></i>
+                  <p class="text-[hsl(var(--muted-foreground))]">Use o Google Translate para traduzir páginas quando necessário</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="text-green-500 text-xl flex-shrink-0 w-5 h-5 mt-0.5"></i>
+                  <p class="text-[hsl(var(--muted-foreground))]">Alguns vídeos podem ter legendas em inglês ou português</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="text-green-500 text-xl flex-shrink-0 w-5 h-5 mt-0.5"></i>
+                  <p class="text-[hsl(var(--muted-foreground))]">A plataforma funciona perfeitamente no Brasil</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i data-lucide="check-circle-2" class="text-green-500 text-xl flex-shrink-0 w-5 h-5 mt-0.5"></i>
+                  <p class="text-[hsl(var(--muted-foreground))]">Comunidade global muito acolhedora com estrangeiros</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <i data-lucide="alert-triangle" class="text-yellow-500 text-xl flex-shrink-0 w-5 h-5 mt-0.5"></i>
+                  <p class="text-[hsl(var(--muted-foreground))]">Certifique-se de ter internet estável durante uploads</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i data-lucide="alert-triangle" class="text-yellow-500 text-xl flex-shrink-0 w-5 h-5 mt-0.5"></i>
+                  <p class="text-[hsl(var(--muted-foreground))]">Alguns recursos podem estar em chinês simplificado</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i data-lucide="lightbulb" class="text-blue-500 text-xl flex-shrink-0 w-5 h-5 mt-0.5"></i>
+                  <p class="text-[hsl(var(--muted-foreground))]">Explore as configurações para personalizar sua experiência</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i data-lucide="lightbulb" class="text-blue-500 text-xl flex-shrink-0 w-5 h-5 mt-0.5"></i>
+                  <p class="text-[hsl(var(--muted-foreground))]">Participe da comunidade brasileira através das redes sociais</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f0f1a] text-white py-16 lg:py-20 relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="blob w-64 h-64 bg-[hsl(var(--bili-blue))] top-[-20%] right-[-10%] opacity-5"></div>
+        <div class="blob w-48 h-48 bg-[hsl(var(--bili-pink))] bottom-[-10%] left-[-5%] opacity-5"></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid md:grid-cols-3 gap-10 lg:gap-12">
+          <div class="reveal">
+            <div class="flex items-center space-x-3 mb-5">
+              <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+                <span class="text-white font-bold text-lg">B</span>
+              </div>
+              <h3 class="text-2xl font-bold font-display">Bilibili Brasil</h3>
+            </div>
+            <p class="text-gray-400 leading-relaxed">Descobrindo e celebrando a cultura otaku através da maior plataforma de vídeos da China.</p>
+            <div class="flex gap-3 mt-6">
+              <a href="https://discord.gg/ctJfhy4yew" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-[#5865f2] flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/10">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/></svg>
+              </a>
+              <a href="https://x.com/BilibiliBR" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white hover:text-black flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/10">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay: 0.1s;">
+            <h4 class="text-lg font-semibold mb-5 font-display">Links Úteis</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li><a href="https://www.bilibili.com/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-blue))] transition-colors duration-200 flex items-center gap-2"><i data-lucide="external-link" class="w-3 h-3"></i> Site Oficial Bilibili</a></li>
+              <li><a href="https://app.bilibili.com/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-blue))] transition-colors duration-200 flex items-center gap-2"><i data-lucide="external-link" class="w-3 h-3"></i> App Mobile</a></li>
+              <li><a href="https://www.bilibili.tv/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-blue))] transition-colors duration-200 flex items-center gap-2"><i data-lucide="external-link" class="w-3 h-3"></i> Bilibili Internacional</a></li>
+              <li><a href="https://member.bilibili.com/studio/home" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-blue))] transition-colors duration-200 flex items-center gap-2"><i data-lucide="external-link" class="w-3 h-3"></i> Centro de Criadores</a></li>
+            </ul>
+          </div>
+          <div class="reveal" style="transition-delay: 0.2s;">
+            <h4 class="text-lg font-semibold mb-5 font-display">Categorias Populares</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li><a href="https://www.bilibili.com/v/anime/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-pink))] transition-colors duration-200 flex items-center gap-2"><i data-lucide="play" class="w-3 h-3"></i> Anime &amp; Manga</a></li>
+              <li><a href="https://www.bilibili.com/v/game/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-pink))] transition-colors duration-200 flex items-center gap-2"><i data-lucide="play" class="w-3 h-3"></i> Gaming</a></li>
+              <li><a href="https://www.bilibili.com/v/music/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-pink))] transition-colors duration-200 flex items-center gap-2"><i data-lucide="play" class="w-3 h-3"></i> Música &amp; Covers</a></li>
+              <li><a href="https://www.bilibili.com/v/knowledge/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-pink))] transition-colors duration-200 flex items-center gap-2"><i data-lucide="play" class="w-3 h-3"></i> Educação</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 mt-12 pt-8 text-center">
+          <p class="text-gray-500 text-sm">© 2026 Bilibili Brasil - Site de fãs não oficial. Feito por <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-blue))] transition-colors">https://cth.jp/</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 gradient-bg rounded-full shadow-xl shadow-[hsl(var(--bili-blue))]/30 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 z-50" aria-label="Voltar ao topo" type="button">
+      <i data-lucide="chevron-up" class="w-6 h-6"></i>
+    </button>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
