@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <title>Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku</title>
-    <meta name="description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação. Conecte-se com milhões de fãs brasileiros da cultura ACG." />
+    <title>Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Conteúdo Criativo</title>
+    <meta name="description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada a anime, gaming e conteúdo criativo. Conecte-se com milhões de fãs brasileiros da cultura ACG." />
     <meta name="keywords" content="bilibili, anime, gaming, otaku, cultura, vídeos, brasil, ACG, manga, música, covers, educação, streaming" />
     <meta name="author" content="Bilibili Brasil" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -15,8 +15,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bilibili.com.br/" />
-    <meta property="og:title" content="Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku" />
-    <meta property="og:description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação. Conecte-se com milhões de fãs brasileiros da cultura ACG." />
+    <meta property="og:title" content="Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Conteúdo Criativo" />
+    <meta property="og:description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada a anime, gaming e conteúdo criativo. Conecte-se com milhões de fãs brasileiros da cultura ACG." />
     <meta property="og:image" content="https://bilibili.com.br/assets/icons/logo.webp" />
     <meta property="og:site_name" content="Bilibili Brasil" />
     <meta property="og:locale" content="pt_BR" />
@@ -24,8 +24,8 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://bilibili.com.br/" />
-    <meta name="twitter:title" content="Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Cultura Otaku" />
-    <meta name="twitter:description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada à cultura otaku, anime, gaming, música e educação." />
+    <meta name="twitter:title" content="Bilibili Brasil - Plataforma de Vídeos Anime, Gaming e Conteúdo Criativo" />
+    <meta name="twitter:description" content="Descubra o Bilibili Brasil, a maior plataforma de vídeos da China dedicada a anime, gaming e conteúdo criativo." />
     <meta name="twitter:image" content="https://bilibili.com.br/assets/icons/logo.webp" />
     <meta name="twitter:site" content="@bilibili" />
     <meta name="twitter:creator" content="@bilibili" />
@@ -116,7 +116,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Bilibili Brasil",
-        "description": "Plataforma de vídeos dedicada à cultura otaku, anime, gaming e muito mais!",
+        "description": "Plataforma de vídeos dedicada a anime, gaming e conteúdo criativo.",
         "url": "https://bilibili.com.br/",
         "potentialAction": {
           "@type": "SearchAction",
@@ -134,11 +134,13 @@
       }
     </script>
 
-    <!-- Service Worker -->
+    <!-- Unregister old service worker -->
     <script>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js').catch(function() {});
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for (var i = 0; i < registrations.length; i++) {
+            registrations[i].unregister();
+          }
         });
       }
     </script>
