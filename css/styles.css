@@ -303,6 +303,44 @@ body {
   outline-offset: 2px;
 }
 
+/* Phosphor Icons sizing fix */
+.ph-duotone {
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Map Tailwind width classes to font-size for Phosphor webfont icons */
+.ph-duotone.w-3,
+.ph-duotone.h-3 { font-size: 0.75rem; }
+.ph-duotone.w-4,
+.ph-duotone.h-4 { font-size: 1rem; }
+.ph-duotone.w-5,
+.ph-duotone.h-5 { font-size: 1.25rem; }
+.ph-duotone.w-6,
+.ph-duotone.h-6 { font-size: 1.5rem; }
+.ph-duotone.w-7,
+.ph-duotone.h-7 { font-size: 1.75rem; }
+.ph-duotone.w-8,
+.ph-duotone.h-8 { font-size: 2rem; }
+
+.international-card .card-icon i.ph-duotone,
+.version-card .card-icon i.ph-duotone {
+  font-size: 1.75rem;
+}
+
+/* Feature cards icon containers (w-12/w-14) */
+div.w-12.h-12 > i.ph-duotone,
+div.w-14.h-14 > i.ph-duotone {
+  font-size: 1.75rem;
+}
+
+.international-cta-card .check-circle i.ph-duotone {
+  font-size: 1rem;
+}
+
 /* ===== INTERNACIONAL SECTION ENHANCEMENTS ===== */
 
 .international-section {

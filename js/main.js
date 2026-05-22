@@ -52,13 +52,13 @@
       if (menuOpen) {
         mobileMenu.classList.remove('max-h-0', 'opacity-0');
         mobileMenu.classList.add('max-h-[500px]', 'opacity-100');
-        mobileMenuBtn.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
+        mobileMenuBtn.innerHTML = '<i class="ph-duotone ph-x h-6 w-6"></i>';
       } else {
         mobileMenu.classList.remove('max-h-[500px]', 'opacity-100');
         mobileMenu.classList.add('max-h-0', 'opacity-0');
-        mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
+        mobileMenuBtn.innerHTML = '<i class="ph-duotone ph-list h-6 w-6"></i>';
       }
-      if (window.lucide && lucide.createIcons) lucide.createIcons();
+      
     });
 
     document.addEventListener('click', function(e) {
@@ -66,8 +66,8 @@
         menuOpen = false;
         mobileMenu.classList.remove('max-h-[500px]', 'opacity-100');
         mobileMenu.classList.add('max-h-0', 'opacity-0');
-        mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
-        if (window.lucide && lucide.createIcons) lucide.createIcons();
+        mobileMenuBtn.innerHTML = '<i class="ph-duotone ph-list h-6 w-6"></i>';
+        
       }
     });
   }
@@ -88,8 +88,8 @@
           menuOpen = false;
           mobileMenu.classList.remove('max-h-[500px]', 'opacity-100');
           mobileMenu.classList.add('max-h-0', 'opacity-0');
-          mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
-          if (window.lucide && lucide.createIcons) lucide.createIcons();
+          mobileMenuBtn.innerHTML = '<i class="ph-duotone ph-list h-6 w-6"></i>';
+          
         }
       }
     });
@@ -152,18 +152,6 @@
     activeObserver.observe(section);
   });
 
-  // ========== INIT LUCIDE ==========
-  function initIcons() {
-    if (window.lucide && lucide.createIcons) {
-      lucide.createIcons();
-    }
-  }
-
-  // Try immediately and on load
-  initIcons();
-  window.addEventListener('load', initIcons);
-
-  // Re-init icons periodically to catch dynamically added ones
-  setTimeout(initIcons, 500);
-  setTimeout(initIcons, 1500);
+  // ========== INIT PHOSPHOR ==========
+  // Phosphor Icons usa webfont, não requer inicialização JS
 })();
