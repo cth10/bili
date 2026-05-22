@@ -282,69 +282,119 @@
     </section>
 
     <!-- Sobre -->
-    <section id="sobre" class="py-20 lg:py-28 relative" aria-labelledby="historia-heading">
+    <section id="sobre" class="py-16 lg:py-24 relative" aria-labelledby="historia-heading">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16 reveal">
+        <div class="text-center mb-12 reveal">
           <span class="inline-block px-4 py-1.5 rounded-full bg-bili-light text-[hsl(var(--bili-blue))] text-sm font-semibold mb-4">Nossa História</span>
           <h2 id="historia-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text mb-4 font-display">História do Bilibili</h2>
-          <p class="text-lg sm:text-xl text-[hsl(var(--muted-foreground))] max-w-3xl mx-auto">Conheça a jornada de uma das plataformas mais inovadoras da internet para anime, gaming e cultura japonesa</p>
+          <p class="text-lg text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">Da paixão pela cultura ACG à maior comunidade de vídeos da China</p>
         </div>
 
-        <div class="relative timeline-line max-w-4xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-8 md:gap-0">
-            <!-- Item 1 -->
-            <div class="reveal-left md:text-right md:pr-12">
-              <div class="bili-card rounded-2xl p-6 lg:p-8 card-shine relative">
-                <div class="absolute -right-[3.25rem] top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-blue))]/30 hidden md:flex z-10">
-                  <time class="text-white text-lg font-bold" datetime="2009">09</time>
-                </div>
-                <div class="flex md:justify-end mb-4">
-                  <div class="w-14 h-14 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-blue))]/20 md:hidden">
-                    <time class="text-white text-xl font-bold" datetime="2009">09</time>
-                  </div>
-                  <span class="hidden md:inline-flex items-center px-3 py-1 rounded-full bg-bili-light text-[hsl(var(--bili-blue))] text-xs font-bold">2009</span>
-                </div>
-                <h3 class="text-xl lg:text-2xl font-bold bili-dark mb-3 font-display">Fundação do Bilibili</h3>
-                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Criado como um site de compartilhamento de vídeos focado em anime e cultura ACG (Anime, Comic, Game), revolucionando o entretenimento para fãs</p>
-              </div>
-            </div>
-            <div class="hidden md:block"></div>
+        <!-- Stats strip -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12 stagger-children">
+          <div class="bili-card rounded-2xl p-5 text-center reveal-scale">
+            <div class="text-2xl lg:text-3xl font-bold bili-blue font-display">2009</div>
+            <div class="text-xs text-[hsl(var(--muted-foreground))] mt-1 font-medium">Ano de Fundação</div>
+          </div>
+          <div class="bili-card rounded-2xl p-5 text-center reveal-scale">
+            <div class="text-2xl lg:text-3xl font-bold bili-pink font-display">300M+</div>
+            <div class="text-xs text-[hsl(var(--muted-foreground))] mt-1 font-medium">Usuários Mensais</div>
+          </div>
+          <div class="bili-card rounded-2xl p-5 text-center reveal-scale">
+            <div class="text-2xl lg:text-3xl font-bold gradient-text font-display">NASDAQ</div>
+            <div class="text-xs text-[hsl(var(--muted-foreground))] mt-1 font-medium">Listada em 2018</div>
+          </div>
+          <div class="bili-card rounded-2xl p-5 text-center reveal-scale">
+            <div class="text-2xl lg:text-3xl font-bold bili-blue font-display">ACG</div>
+            <div class="text-xs text-[hsl(var(--muted-foreground))] mt-1 font-medium">DNA da Plataforma</div>
+          </div>
+        </div>
 
-            <!-- Item 2 -->
-            <div class="hidden md:block"></div>
-            <div class="reveal-right md:pl-12">
-              <div class="bili-card rounded-2xl p-6 lg:p-8 card-shine relative">
-                <div class="absolute -left-[3.25rem] top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-pink))] to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-pink))]/30 hidden md:flex z-10">
-                  <i data-lucide="rocket" class="text-white w-5 h-5"></i>
-                </div>
-                <div class="flex md:justify-start mb-4">
-                  <div class="w-14 h-14 bg-gradient-to-r from-[hsl(var(--bili-pink))] to-pink-500 rounded-2xl flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-pink))]/20 md:hidden">
-                    <i data-lucide="rocket" class="text-white w-5 h-5"></i>
-                  </div>
-                  <span class="hidden md:inline-flex items-center px-3 py-1 rounded-full bg-pink-50 text-[hsl(var(--bili-pink))] text-xs font-bold ml-3">Crescimento</span>
-                </div>
-                <h3 class="text-xl lg:text-2xl font-bold bili-dark mb-3 font-display">Crescimento</h3>
-                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Expandiu para incluir gaming, música, tecnologia e conteúdo educacional, atraindo milhões de usuários</p>
+        <!-- Compact milestone grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto stagger-children">
+          <!-- 2009 -->
+          <div class="bili-card rounded-2xl p-6 card-shine reveal group">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-blue))]/20 group-hover:scale-110 transition-transform">
+                <i data-lucide="tv" class="text-white w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-[hsl(var(--bili-blue))] bg-bili-light px-2 py-0.5 rounded-full">2009</span>
+                <h3 class="text-lg font-bold bili-dark font-display mt-0.5">Fundação</h3>
               </div>
             </div>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">Criado por Xu Yi como site de compartilhamento de vídeos focado em anime e cultura ACG, inspirado no Niconico do Japão.</p>
+          </div>
 
-            <!-- Item 3 -->
-            <div class="reveal-left md:text-right md:pr-12">
-              <div class="bili-card rounded-2xl p-6 lg:p-8 card-shine relative">
-                <div class="absolute -right-[3.25rem] top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-purple-500 to-[hsl(var(--bili-pink))] rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30 hidden md:flex z-10">
-                  <i data-lucide="sparkles" class="text-white w-5 h-5"></i>
-                </div>
-                <div class="flex md:justify-end mb-4">
-                  <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-[hsl(var(--bili-pink))] rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20 md:hidden">
-                    <i data-lucide="sparkles" class="text-white w-5 h-5"></i>
-                  </div>
-                  <span class="hidden md:inline-flex items-center px-3 py-1 rounded-full bg-purple-50 text-purple-600 text-xs font-bold">Hoje</span>
-                </div>
-                <h3 class="text-xl lg:text-2xl font-bold bili-dark mb-3 font-display">Hoje</h3>
-                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">Uma das maiores plataformas de vídeo da China, com foco em comunidade e interação única</p>
+          <!-- Rebranding -->
+          <div class="bili-card rounded-2xl p-6 card-shine reveal group">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-pink))] to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-[hsl(var(--bili-pink))]/20 group-hover:scale-110 transition-transform">
+                <i data-lucide="zap" class="text-white w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-[hsl(var(--bili-pink))] bg-pink-50 px-2 py-0.5 rounded-full">Jan 2010</span>
+                <h3 class="text-lg font-bold bili-dark font-display mt-0.5">Nasce o Bilibili</h3>
               </div>
             </div>
-            <div class="hidden md:block"></div>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">Rebranding de Mikufans para Bilibili — nome inspirado em Mikoto Misaka, de <em>A Certain Scientific Railgun</em>. Foco em vídeos com Danmaku.</p>
+          </div>
+
+          <!-- Crescimento -->
+          <div class="bili-card rounded-2xl p-6 card-shine reveal group">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-[hsl(var(--bili-pink))] rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
+                <i data-lucide="rocket" class="text-white w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">2013–17</span>
+                <h3 class="text-lg font-bold bili-dark font-display mt-0.5">Expansão</h3>
+              </div>
+            </div>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">Expansão para gaming, música, tecnologia e conteúdo educacional. Lançamento do sistema de "UPs" (criadores).</p>
+          </div>
+
+          <!-- IPO -->
+          <div class="bili-card rounded-2xl p-6 card-shine reveal group">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+                <i data-lucide="trending-up" class="text-white w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">2018</span>
+                <h3 class="text-lg font-bold bili-dark font-display mt-0.5">IPO na NASDAQ</h3>
+              </div>
+            </div>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">Abertura de capital na NASDAQ com o ticker BILI. Reconhecimento global como gigante do entretenimento chinês.</p>
+          </div>
+
+          <!-- Gaming -->
+          <div class="bili-card rounded-2xl p-6 card-shine reveal group">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
+                <i data-lucide="gamepad-2" class="text-white w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded-full">2019+</span>
+                <h3 class="text-lg font-bold bili-dark font-display mt-0.5">Bilibili Gaming</h3>
+              </div>
+            </div>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">Entrada no mercado de games com publicação na Steam, times de esports (LoL) e investimento em estúdios.</p>
+          </div>
+
+          <!-- Hoje -->
+          <div class="bili-card rounded-2xl p-6 card-shine reveal group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] opacity-5 rounded-full -mr-8 -mt-8"></div>
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="sparkles" class="text-white w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-white bg-gradient-to-r from-[hsl(var(--bili-blue))] to-[hsl(var(--bili-pink))] px-2 py-0.5 rounded-full">Hoje</span>
+                <h3 class="text-lg font-bold bili-dark font-display mt-0.5">Ecossistema Global</h3>
+              </div>
+            </div>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">Uma das maiores plataformas de vídeo do mundo, com versão internacional bilibili.tv e comunidade ativa globalmente.</p>
           </div>
         </div>
       </div>

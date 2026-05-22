@@ -226,7 +226,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Timeline line */
+/* Timeline line (legacy, kept for backwards compat) */
 .timeline-line::before {
   content: '';
   position: absolute;
