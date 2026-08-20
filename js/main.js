@@ -114,43 +114,47 @@
   });
 
   // ========== ACTIVE NAV LINK ==========
+  // Só roda em páginas com navegação por âncoras (links com data-section).
+  // Em páginas com navegação multi-página, o estado ativo é definido no HTML.
   var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.nav-link');
-  var mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  var navLinks = document.querySelectorAll('.nav-link[data-section]');
+  var mobileNavLinks = document.querySelectorAll('.mobile-nav-link[data-section]');
 
-  var activeObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        var id = entry.target.getAttribute('id');
-        navLinks.forEach(function(link) {
-          if (link.getAttribute('data-section') === id) {
-            link.classList.add('bili-blue', 'active');
-            link.classList.remove('bili-dark');
-          } else {
-            link.classList.remove('bili-blue', 'active');
-            link.classList.add('bili-dark');
-          }
-        });
-        mobileNavLinks.forEach(function(link) {
-          if (link.getAttribute('data-section') === id) {
-            link.classList.add('bili-blue');
-            link.classList.remove('bili-dark');
-          } else {
-            link.classList.remove('bili-blue');
-            link.classList.add('bili-dark');
-          }
-        });
-      }
+  if (navLinks.length > 0 || mobileNavLinks.length > 0) {
+    var activeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');
+          navLinks.forEach(function(link) {
+            if (link.getAttribute('data-section') === id) {
+              link.classList.add('bili-blue', 'active');
+              link.classList.remove('bili-dark');
+            } else {
+              link.classList.remove('bili-blue', 'active');
+              link.classList.add('bili-dark');
+            }
+          });
+          mobileNavLinks.forEach(function(link) {
+            if (link.getAttribute('data-section') === id) {
+              link.classList.add('bili-blue');
+              link.classList.remove('bili-dark');
+            } else {
+              link.classList.remove('bili-blue');
+              link.classList.add('bili-dark');
+            }
+          });
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '-90px 0px -60% 0px',
+      threshold: 0
     });
-  }, {
-    root: null,
-    rootMargin: '-90px 0px -60% 0px',
-    threshold: 0
-  });
 
-  sections.forEach(function(section) {
-    activeObserver.observe(section);
-  });
+    sections.forEach(function(section) {
+      activeObserver.observe(section);
+    });
+  }
 
   // ========== INIT PHOSPHOR ==========
   // Phosphor Icons usa webfont, não requer inicialização JS

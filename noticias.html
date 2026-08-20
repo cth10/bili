@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Bilibili se torna global e mira o YouTube | Bilibili Brasil</title>
+    <meta name="description" content="A Bilibili lançou seu app internacional com suporte a português, dublagem por IA e cadastro sem verificação de identidade. Entenda a expansão global que pode criar uma rival para o YouTube." />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="author" content="Bilibili Brasil" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bilibili.com.br/noticias.html" />
+    <meta property="og:title" content="Bilibili se torna global e mira o YouTube" />
+    <meta property="og:description" content="App internacional com português, dublagem por IA e 100 milhões de downloads: entenda a expansão global da Bilibili." />
+    <meta property="og:image" content="https://bilibili.com.br/assets/icons/logo.webp" />
+    <meta property="og:site_name" content="Bilibili Brasil" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <link rel="canonical" href="https://bilibili.com.br/noticias.html" />
+
+    <!-- Performance: Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#00A1D6" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/icons/logo.png" />
+    <link rel="icon" type="image/webp" href="./assets/icons/logo.webp" />
+    <link rel="apple-touch-icon" href="./assets/icons/logo.webp" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+              display: ['Outfit', 'Inter', 'sans-serif'],
+            },
+            colors: {
+              bili: {
+                blue: '#00A1D6',
+                pink: '#FB7299',
+                light: '#E6F7FC',
+                dark: '#18191C',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'gradient-x': 'gradient-x 8s ease infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                '50%': { transform: 'translateY(-20px) rotate(2deg)' },
+              },
+              'gradient-x': {
+                '0%, 100%': { 'background-position': '0% 50%' },
+                '50%': { 'background-position': '100% 50%' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Bilibili acelera expansão global e pode se tornar nova rival do YouTube",
+        "datePublished": "2026-08-20",
+        "dateModified": "2026-08-20",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Bilibili Brasil",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://bilibili.com.br/assets/icons/logo.webp"
+          }
+        }
+      }
+    </script>
+
+    <!-- Unregister old service worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for (var i = 0; i < registrations.length; i++) {
+            registrations[i].unregister();
+          }
+        });
+      }
+    </script>
+  </head>
+
+  <body class="min-h-screen antialiased">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header id="main-header" class="fixed top-0 w-full z-50 glass-header transition-all duration-500">
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <a href="./index.html" class="flex items-center space-x-3 flex-shrink-0 group">
+            <img src="./assets/icons/logo.webp" alt="Bilibili Logo" class="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+            <span class="text-lg sm:text-xl font-bold gradient-text whitespace-nowrap font-display">Bilibili Brasil</span>
+          </a>
+
+          <div class="hidden lg:flex items-center space-x-1 xl:space-x-2" id="desktop-nav">
+            <a href="./index.html" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Início</a>
+            <a href="./noticias.html" class="nav-link nav-link-effect active px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-blue">Notícias</a>
+            <a href="./sobre.html" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Sobre</a>
+            <a href="./guia.html" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Guia</a>
+            <a href="./index.html#comunidade" class="nav-link nav-link-effect px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap hover:bg-bili-light/50 bili-dark">Comunidade</a>
+          </div>
+
+          <div class="flex items-center space-x-3">
+            <a href="https://play.google.com/store/apps/details?id=com.bilibili.app.in" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gradient-bg text-white px-4 py-2 rounded-xl text-sm font-semibold hover:shadow-lg hover:shadow-[hsl(var(--bili-blue))]/25 transition-all duration-300">
+              <i class="ph-duotone ph-device-mobile mr-1.5 w-4 h-4"></i> Baixar App
+            </a>
+            <div class="lg:hidden">
+              <button id="mobile-menu-btn" class="p-2 rounded-lg bili-dark hover:bg-bili-light/50 transition-colors duration-200" aria-label="Abrir menu" type="button">
+                <i class="ph-duotone ph-list h-6 w-6"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0">
+          <div class="py-4 space-y-1 border-t border-[hsl(var(--bili-blue))]/10">
+            <a href="./index.html" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Início</a>
+            <a href="./noticias.html" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-blue">Notícias</a>
+            <a href="./sobre.html" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Sobre</a>
+            <a href="./guia.html" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Guia</a>
+            <a href="./index.html#comunidade" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-bili-light/50 hover:translate-x-2 bili-dark">Comunidade</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Artigo -->
+      <article class="pt-28 lg:pt-36 pb-20 lg:pb-28 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="blob w-80 h-80 bg-[hsl(var(--bili-blue))] top-[-5%] right-[-10%] opacity-[0.06]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+          <div class="max-w-3xl mx-auto">
+            <!-- Cabeçalho do artigo -->
+            <header class="mb-10 lg:mb-14 reveal">
+              <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-bili-light text-[hsl(var(--bili-blue))] text-sm font-semibold mb-5 border border-[hsl(var(--bili-blue))]/10">
+                <span class="w-2 h-2 bg-[hsl(var(--bili-blue))] rounded-full mr-2 animate-pulse"></span>
+                Notícia · 20 de agosto de 2026
+              </span>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight font-display text-[hsl(var(--foreground))] mb-5">Bilibili acelera expansão global e se prepara para disputar com o YouTube</h1>
+              <p class="text-lg sm:text-xl text-[hsl(var(--muted-foreground))] leading-relaxed">App internacional com suporte a português, dublagem por inteligência artificial e cadastro sem verificação de identidade marcam a maior investida da plataforma chinesa fora da Ásia.</p>
+            </header>
+
+            <!-- Números -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12 lg:mb-16 stagger-children">
+              <div class="bili-card rounded-2xl p-5 text-center reveal-scale">
+                <div class="text-2xl lg:text-3xl font-bold bili-blue font-display">100M+</div>
+                <div class="text-xs text-[hsl(var(--muted-foreground))] mt-1 font-medium">Downloads do app global na Google Play</div>
+              </div>
+              <div class="bili-card rounded-2xl p-5 text-center reveal-scale">
+                <div class="text-2xl lg:text-3xl font-bold bili-pink font-display">400 mil</div>
+                <div class="text-xs text-[hsl(var(--muted-foreground))] mt-1 font-medium">Visitantes no Bilibili World 2026</div>
+              </div>
+              <div class="bili-card rounded-2xl p-5 text-center reveal-scale">
+                <div class="text-2xl lg:text-3xl font-bold gradient-text font-display">PT-BR</div>
+                <div class="text-xs text-[hsl(var(--muted-foreground))] mt-1 font-medium">Português entre os idiomas do app</div>
+              </div>
+              <div class="bili-card rounded-2xl p-5 text-center reveal-scale">
+                <div class="text-2xl lg:text-3xl font-bold bili-blue font-display">US$ 15 mil</div>
+                <div class="text-xs text-[hsl(var(--muted-foreground))] mt-1 font-medium">Prêmios para animadores independentes</div>
+              </div>
+            </div>
+
+            <!-- Corpo do artigo -->
+            <div class="space-y-10 lg:space-y-12">
+              <section class="reveal">
+                <h2 class="text-2xl lg:text-3xl font-bold bili-dark mb-4 font-display">O anúncio</h2>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed mb-4">A Bilibili, uma das maiores plataformas de vídeos da China, confirmou que está <strong class="text-[hsl(var(--foreground))]">"se tornando global"</strong>. A mensagem veio do próprio Bilibili Creator Hub, perfil oficial voltado a criadores, que anunciou o lançamento global do aplicativo internacional, já disponível no Android, com versão para iOS e mais países a caminho.</p>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">A empresa já mantinha uma operação fora da China, especialmente no Sudeste Asiático, mas os sinais mais recentes apontam para uma estratégia bem mais ampla: conteúdo distribuído globalmente, melhor localização e cadastro facilitado, <strong class="text-[hsl(var(--foreground))]">sem a verificação de identidade</strong> exigida na versão chinesa.</p>
+              </section>
+
+              <section class="reveal">
+                <h2 class="text-2xl lg:text-3xl font-bold bili-dark mb-4 font-display">Muito além dos animes</h2>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed mb-4">Na Google Play, o aplicativo internacional da Bilibili já ultrapassou <strong class="text-[hsl(var(--foreground))]">100 milhões de downloads</strong>, oferecendo não apenas animes licenciados, mas também vídeos produzidos pelos próprios usuários.</p>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">No iOS, o novo app <em>Bilibili – All Your Fav Videos</em> destaca suporte a <strong class="text-[hsl(var(--foreground))]">português, inglês, espanhol e japonês</strong>, com vídeos sobre games, tecnologia, música e cultura: um cardápio que vai muito além do nicho ACG que tornou a marca conhecida.</p>
+              </section>
+
+              <!-- Destaque IA -->
+              <div class="bili-card rounded-2xl p-6 lg:p-8 border-[hsl(var(--bili-blue))]/20 bg-gradient-to-r from-bili-light/60 to-pink-50/60 reveal">
+                <div class="flex items-start gap-4">
+                  <div class="w-11 h-11 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-[hsl(var(--bili-blue))]/20">
+                    <i class="ph-duotone ph-translate text-white w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h2 class="text-xl lg:text-2xl font-bold bili-dark mb-2 font-display">IA para derrubar a barreira do idioma</h2>
+                    <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">O recurso mais promissor da expansão é a <strong class="text-[hsl(var(--foreground))]">dublagem automática por inteligência artificial</strong>: vídeos de criadores passam a ser apresentados em outros idiomas sem depender exclusivamente de legendas. Na direção oposta, o <strong class="text-[hsl(var(--foreground))]">Bilibili Studio</strong>, centro de serviços para criadores globais, traduz vídeos automaticamente para o chinês, abrindo as portas do enorme público local para produtores estrangeiros.</p>
+                  </div>
+                </div>
+              </div>
+
+              <section class="reveal">
+                <h2 class="text-2xl lg:text-3xl font-bold bili-dark mb-4 font-display">A disputa pelos criadores</h2>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed mb-4">Para competir com o YouTube, a Bilibili sabe que precisa atrair quem produz conteúdo. O primeiro passo é uma campanha dedicada à <strong class="text-[hsl(var(--foreground))]">animação independente</strong>: animadores e estúdios podem enviar trailers de seus projetos para concorrer a um prêmio combinado de <strong class="text-[hsl(var(--foreground))]">US$ 15 mil</strong>, além de destaque dentro da plataforma.</p>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">A grande questão que permanece é a <strong class="text-[hsl(var(--foreground))]">monetização</strong>: ainda não está claro quais sistemas de pagamento para criadores internacionais acompanharão a expansão. Se a Bilibili oferecer boas condições, o YouTube pode ganhar um adversário de peso.</p>
+              </section>
+
+              <section class="reveal">
+                <h2 class="text-2xl lg:text-3xl font-bold bili-dark mb-4 font-display">Uma rival para o YouTube?</h2>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed mb-4">A abertura para conteúdo produzido por usuários torna a expansão particularmente interessante. Em vez de permanecer como um serviço de streaming de animes, a Bilibili se apresenta cada vez mais como uma plataforma completa de <strong class="text-[hsl(var(--foreground))]">vídeos, criadores, comunidades, transmissões ao vivo e conteúdo de games e tecnologia</strong>, território ocupado hoje principalmente pelo YouTube no ocidente.</p>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed">O tamanho da operação impressiona: o Bilibili World 2026, convenção anual da empresa em Xangai, recebeu <strong class="text-[hsl(var(--foreground))]">400 mil visitantes</strong> este ano. Ainda é cedo para falar em confronto direto, mas a companhia está claramente construindo as ferramentas para atrair usuários e criadores internacionais.</p>
+              </section>
+
+              <section class="reveal">
+                <h2 class="text-2xl lg:text-3xl font-bold bili-dark mb-4 font-display">O que muda para o Brasil</h2>
+                <p class="text-[hsl(var(--muted-foreground))] leading-relaxed mb-6">Para o público brasileiro, o suporte oficial ao <strong class="text-[hsl(var(--foreground))]">português</strong> é o destaque. O cadastro no app internacional dispensa a verificação de identidade da versão chinesa, tornando a entrada muito mais simples do que o processo tradicional.</p>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <a href="https://play.google.com/store/apps/details?id=com.bilibili.app.in" target="_blank" rel="noopener noreferrer" class="bili-card rounded-2xl p-5 card-shine group flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-blue))] to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-[hsl(var(--bili-blue))]/20 group-hover:scale-110 transition-transform">
+                      <i class="ph-duotone ph-device-mobile text-white w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-bold bili-dark font-display">Baixar o app global</h3>
+                      <p class="text-sm text-[hsl(var(--muted-foreground))]">Caminho mais fácil, em português</p>
+                    </div>
+                  </a>
+                  <a href="./guia.html" class="bili-card rounded-2xl p-5 card-shine group flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[hsl(var(--bili-pink))] to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-[hsl(var(--bili-pink))]/20 group-hover:scale-110 transition-transform">
+                      <i class="ph-duotone ph-book-open text-white w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-bold bili-dark font-display">Guia da versão chinesa</h3>
+                      <p class="text-sm text-[hsl(var(--muted-foreground))]">Acesso completo ao catálogo</p>
+                    </div>
+                  </a>
+                </div>
+              </section>
+
+              <!-- Fontes -->
+              <footer class="border-t border-[hsl(var(--border))] pt-8 reveal">
+                <h2 class="text-sm font-bold uppercase tracking-wider text-[hsl(var(--muted-foreground))] mb-4">Fontes</h2>
+                <ul class="space-y-2 text-sm">
+                  <li>
+                    <a href="https://www.gamevicio.com/noticias/2026/08/bilibili-expansao-global-nova-rival-do-youtube/" target="_blank" rel="noopener noreferrer" class="bili-blue hover:underline font-medium">GameVício: Bilibili acelera expansão global e pode se tornar nova rival do YouTube</a>
+                  </li>
+                  <li>
+                    <a href="https://www.eurogamer.pt/bilibili-quer-enfrentar-o-youtube-e-aposta-em-videos-traduzidos-por-ia" target="_blank" rel="noopener noreferrer" class="bili-blue hover:underline font-medium">Eurogamer PT: Bilibili quer enfrentar o YouTube e aposta em vídeos traduzidos por IA</a>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f0f1a] text-white py-14 lg:py-16 relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="blob w-64 h-64 bg-[hsl(var(--bili-blue))] top-[-20%] right-[-10%] opacity-5"></div>
+        <div class="blob w-48 h-48 bg-[hsl(var(--bili-pink))] bottom-[-10%] left-[-5%] opacity-5"></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid md:grid-cols-3 gap-10 lg:gap-12">
+          <div>
+            <div class="flex items-center space-x-3 mb-5">
+              <img src="./assets/icons/logo.webp" alt="Bilibili Logo" class="w-10 h-10 object-contain" />
+              <h3 class="text-2xl font-bold font-display">Bilibili Brasil</h3>
+            </div>
+            <p class="text-gray-400 leading-relaxed">A comunidade brasileira da maior plataforma de vídeos da China. Anime, gaming, tecnologia e criatividade.</p>
+            <div class="flex gap-3 mt-6">
+              <a href="https://discord.gg/ctJfhy4yew" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-[#5865f2] flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/10">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/></svg>
+              </a>
+              <a href="https://x.com/BilibiliBR" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white hover:text-black flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/10">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-5 font-display">Páginas</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li><a href="./index.html" class="hover:text-[hsl(var(--bili-blue))] transition-colors duration-200 flex items-center gap-2"><i class="ph-duotone ph-house w-3 h-3"></i> Início</a></li>
+              <li><a href="./noticias.html" class="hover:text-[hsl(var(--bili-blue))] transition-colors duration-200 flex items-center gap-2"><i class="ph-duotone ph-newspaper w-3 h-3"></i> Notícias</a></li>
+              <li><a href="./sobre.html" class="hover:text-[hsl(var(--bili-blue))] transition-colors duration-200 flex items-center gap-2"><i class="ph-duotone ph-info w-3 h-3"></i> Sobre o Bilibili</a></li>
+              <li><a href="./guia.html" class="hover:text-[hsl(var(--bili-blue))] transition-colors duration-200 flex items-center gap-2"><i class="ph-duotone ph-book-open w-3 h-3"></i> Guia Completo</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-5 font-display">Links Oficiais</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li><a href="https://play.google.com/store/apps/details?id=com.bilibili.app.in" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-pink))] transition-colors duration-200 flex items-center gap-2"><i class="ph-duotone ph-arrow-square-out w-3 h-3"></i> App Android (Google Play)</a></li>
+              <li><a href="https://www.bilibili.com/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-pink))] transition-colors duration-200 flex items-center gap-2"><i class="ph-duotone ph-arrow-square-out w-3 h-3"></i> Bilibili.com (China)</a></li>
+              <li><a href="https://www.bilibili.tv/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-pink))] transition-colors duration-200 flex items-center gap-2"><i class="ph-duotone ph-arrow-square-out w-3 h-3"></i> Bilibili.tv</a></li>
+              <li><a href="https://member.bilibili.com/studio/home" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-pink))] transition-colors duration-200 flex items-center gap-2"><i class="ph-duotone ph-arrow-square-out w-3 h-3"></i> Bilibili Studio</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 mt-12 pt-8 text-center">
+          <p class="text-gray-500 text-sm">© 2026 Bilibili Brasil - Site de fãs não oficial. Feito por <a href="https://cth.jp/" target="_blank" rel="noopener noreferrer" class="hover:text-[hsl(var(--bili-blue))] transition-colors">https://cth.jp/</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 gradient-bg rounded-full shadow-xl shadow-[hsl(var(--bili-blue))]/30 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 z-50" aria-label="Voltar ao topo" type="button">
+      <i class="ph-duotone ph-caret-up w-6 h-6"></i>
+    </button>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
